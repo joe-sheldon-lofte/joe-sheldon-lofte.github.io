@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lofte Sanctuary | Private Media Network</title>
+    <title>Lofte Sanctuary | The Sovereign Network</title>
     <style>
         :root {
-            /* Colors extracted from the Lofte logo */
+            /* Colors matched to your Lofte Logo */
             --bg-color: #37474F; /* Deep Charcoal Blue-Gray */
             --accent-color: #7FB095; /* Muted Teal Green */
             --text-color: #FFFFFF;
-            --card-bg: #455A64; /* Slightly lighter charcoal for cards */
-            --font-main: 'Inter', sans-serif;
-            --menu-bg: #263238; /* Darker menu background */
+            --card-bg: #455A64; /* Mid-tone Blue-Gray */
+            --menu-bg: #263238; /* Dark Menu Background */
+            --font-main: 'Inter', -apple-system, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-main), -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: var(--font-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Navigation Bar */
@@ -32,20 +33,33 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 5%;
+            padding: 5px 5%;
             border-bottom: 2px solid var(--accent-color);
             z-index: 1000;
         }
 
-        nav .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            height: 50px; /* Scales down your 1500px image */
+            width: auto;
+            object-fit: contain; /* Prevents distortion */
+            margin-right: 15px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
             color: var(--accent-color);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        /* Dropdown Navigation */
+        /* Dropdown Navigation Menu */
         nav ul {
             list-style: none;
             margin: 0;
@@ -59,13 +73,14 @@
 
         nav ul li a {
             display: block;
-            padding: 15px 20px;
+            padding: 20px 15px;
             color: var(--text-color);
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: all 0.3s;
         }
 
         nav ul li:hover > a {
@@ -73,16 +88,17 @@
             color: var(--bg-color);
         }
 
-        /* Dropdown Content */
+        /* Hidden Dropdown Lists */
         nav ul ul {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
             background-color: var(--menu-bg);
-            min-width: 220px;
+            min-width: 240px;
             border-top: 2px solid var(--accent-color);
             flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         nav ul li:hover > ul {
@@ -90,9 +106,10 @@
         }
 
         nav ul ul li a {
-            padding: 10px 20px;
+            padding: 12px 20px;
             text-transform: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         nav ul ul li a:hover {
@@ -100,17 +117,17 @@
             color: var(--accent-color);
         }
 
-
         /* Hero Section */
         header {
             text-align: center;
-            padding: 100px 10%;
+            padding: 100px 10% 60px;
         }
 
         h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             line-height: 1.1;
+            font-weight: 900;
         }
 
         h1 span {
@@ -120,60 +137,73 @@
         .hero-btn {
             background-color: var(--accent-color);
             color: var(--bg-color);
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
             display: inline-block;
             margin-top: 30px;
-            transition: transform 0.2s, background-color 0.3s;
+            transition: transform 0.2s;
         }
 
         .hero-btn:hover {
-            transform: scale(1.05);
-            background-color: #A0D6B4; /* Lighter accent on hover */
+            transform: translateY(-3px);
+            background-color: #A0D6B4;
         }
 
-        /* Features Section */
+        /* Cards Section */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            padding: 50px 10%;
+            padding: 40px 10% 100px;
         }
 
         .card {
             background-color: var(--card-bg);
             padding: 40px;
-            border: 1px solid #546E7A;
-            border-radius: 10px;
-            transition: border-color 0.3s;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
         }
 
         .card:hover {
             border-color: var(--accent-color);
+            transform: scale(1.02);
         }
 
         .card h3 {
             color: var(--accent-color);
             margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
-            padding: 50px;
-            border-top: 1px solid #546E7A;
+            padding: 40px;
+            background: var(--menu-bg);
             font-size: 0.8rem;
-            color: #B0BEC5;
-            background-color: var(--menu-bg);
+            color: var(--accent-color);
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; padding: 10px; }
+            nav ul { flex-direction: column; width: 100%; text-align: center; }
+            nav ul ul { position: static; min-width: 100%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">LOFTE</div>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="Lofte Logo">
+            <div class="logo-text">LOFTE</div>
+        </a>
         <ul>
             <li>
                 <a href="#">Lofte.guardian</a>
@@ -197,7 +227,7 @@
             <li>
                 <a href="#">Lofte.vector</a>
                 <ul>
-                    <li><a href="vector-logistics.html">Local and Regional Logistics</a></li>
+                    <li><a href="vector-logistics.html">Regional Logistics</a></li>
                 </ul>
             </li>
             <li>
@@ -215,28 +245,28 @@
     </nav>
 
     <header>
-        <h1>The World's First <br><span>Private Media Network</span></h1>
-        <p>A sovereign sanctuary for creators and neighbors. No tracking. No algorithms.<br><strong>Just High-Trust content.</strong></p>
-        <a href="mobile.html" class="hero-btn">Join the Guild</a>
+        <h1>A Private <br><span>Media Sanctuary</span></h1>
+        <p>No algorithms. No tracking.<br><strong>Owned by the Sovereign.</strong></p>
+        <a href="guardian-mobile.html" class="hero-btn">Enter the Sanctuary</a>
     </header>
 
     <section class="features">
         <div class="card">
-            <h3>Music Sanctuary</h3>
-            <p>100M+ songs in lossless fidelity. Human-led radio shows and private guild discovery.</p>
+            <h3>Music</h3>
+            <p>100M+ songs in lossless fidelity. Human-led radio shows and private discovery.</p>
         </div>
         <div class="card">
-            <h3>Lofte TV</h3>
-            <p>Exclusive 4K documentaries and high-trust indie films. <strong>Invitation-only</strong> creator pipeline.</p>
+            <h3>Television</h3>
+            <p>Exclusive 4K documentaries and high-trust indie films. Curated, invitation-only talent.</p>
         </div>
         <div class="card">
-            <h3>The Shield</h3>
+            <h3>Mobile</h3>
             <p>5G mobile service with a permanent, Swiss-shielded VPN built into the core network.</p>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 Lofte Sanctuary. Built for the Sovereign.
+        &copy; 2026 LOFTE SANCTUARY. ALL RIGHTS RESERVED.
     </footer>
 
 </body>

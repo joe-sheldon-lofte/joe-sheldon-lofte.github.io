@@ -3,271 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lofte Sanctuary | The Sovereign Network</title>
+    <title>Lofte Sanctuary | Sovereign Media</title>
     <style>
         :root {
-            /* Colors matched to your Lofte Logo */
-            --bg-color: #37474F; /* Deep Charcoal Blue-Gray */
-            --accent-color: #7FB095; /* Muted Teal Green */
-            --text-color: #FFFFFF;
-            --card-bg: #455A64; /* Mid-tone Blue-Gray */
-            --menu-bg: #263238; /* Dark Menu Background */
+            --bg-color: #FFFFFF;
+            --sidebar-bg: #F8F9FA;
+            --text-color: #37474F; /* Your Charcoal */
+            --accent-color: #7FB095; /* Your Teal Green */
+            --border-color: #E0E0E0;
             --font-main: 'Inter', -apple-system, sans-serif;
         }
+
+        * { box-sizing: border-box; }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: var(--font-main);
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: var(--menu-bg);
-            position: sticky;
-            top: 0;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 5%;
-            border-bottom: 2px solid var(--accent-color);
-            z-index: 1000;
+            min-height: 100vh;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-container img {
-            height: 50px; /* Scales down your 1500px image */
-            width: auto;
-            object-fit: contain; /* Prevents distortion */
-            margin-right: 15px;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--accent-color);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* Dropdown Navigation Menu */
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            position: relative;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 20px 15px;
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-        }
-
-        nav ul li:hover > a {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-        }
-
-        /* Hidden Dropdown Lists */
-        nav ul ul {
-            display: none;
-            position: absolute;
-            top: 100%;
+        /* Sidebar Navigation */
+        #sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            height: 100vh;
+            position: fixed;
             left: 0;
-            background-color: var(--menu-bg);
-            min-width: 240px;
-            border-top: 2px solid var(--accent-color);
-            flex-direction: column;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            top: 0;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+            z-index: 1001;
+            padding-bottom: 40px;
         }
 
-        nav ul li:hover > ul {
-            display: flex;
-        }
-
-        nav ul ul li a {
-            padding: 12px 20px;
-            text-transform: none;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        nav ul ul li a:hover {
-            background-color: var(--card-bg);
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
-        header {
+        .sidebar-header {
+            padding: 30px 20px;
             text-align: center;
-            padding: 100px 10% 60px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            font-weight: 900;
+        .sidebar-header img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
         }
 
-        h1 span {
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        /* Nav Menu Links */
+        .nav-menu { list-style: none; padding: 20px 0; margin: 0; }
+        
+        .nav-section {
+            padding: 15px 25px 5px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
             color: var(--accent-color);
+            letter-spacing: 1.5px;
         }
 
-        .hero-btn {
+        .nav-menu li a {
+            display: block;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-menu li a:hover {
+            background-color: white;
+            color: var(--accent-color);
+            padding-left: 30px;
+        }
+
+        /* Sub-items (Services) */
+        .sub-menu {
+            list-style: none;
+            padding: 0 0 10px 15px;
+        }
+        
+        .sub-menu li a {
+            padding: 8px 25px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            margin-left: 280px; /* Width of sidebar */
+            padding: 60px 10%;
+            transition: margin-left 0.3s ease;
+        }
+
+        .hero { text-align: center; margin-top: 50px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 900; }
+        .hero p { font-size: 1.2rem; color: #607D8B; }
+
+        /* Mobile Adjustments */
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 1002;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            #sidebar { transform: translateX(-100%); }
+            #sidebar.open { transform: translateX(0); }
+            main { margin-left: 0; padding: 100px 5%; }
+            .mobile-toggle { display: block; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+
+        .btn-main {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
             background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 18px 35px;
+            color: white;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            display: inline-block;
-            margin-top: 30px;
-            transition: transform 0.2s;
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-3px);
-            background-color: #A0D6B4;
-        }
-
-        /* Cards Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 40px 10% 100px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--accent-color);
-            transform: scale(1.02);
-        }
-
-        .card h3 {
-            color: var(--accent-color);
-            margin-top: 0;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--menu-bg);
-            font-size: 0.8rem;
-            color: var(--accent-color);
-            letter-spacing: 1px;
-        }
-
-        /* Mobile Responsive adjustments */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            nav { flex-direction: column; padding: 10px; }
-            nav ul { flex-direction: column; width: 100%; text-align: center; }
-            nav ul ul { position: static; min-width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html" class="logo-container">
+    <button class="mobile-toggle" onclick="toggleMenu()">MENU</button>
+
+    <aside id="sidebar">
+        <div class="sidebar-header">
             <img src="logo.png" alt="Lofte Logo">
-            <div class="logo-text">LOFTE</div>
-        </a>
-        <ul>
-            <li>
-                <a href="#">Lofte.guardian</a>
-                <ul>
-                    <li><a href="guardian-mobile.html">Guardian Mobile</a></li>
-                    <li><a href="guardian-home.html">Guardian Home</a></li>
-                    <li><a href="guardian-nomad.html">Guardian Nomad</a></li>
-                    <li><a href="guardian-global.html">Guardian Global</a></li>
-                    <li><a href="guardian-security.html">Guardian Home Security</a></li>
-                    <li><a href="guardian-shield.html">Guardian Shield</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Lofte.media</a>
-                <ul>
-                    <li><a href="music.html">Lofte Music</a></li>
-                    <li><a href="tv.html">Lofte TV</a></li>
-                    <li><a href="letters.html">Lofte Letters</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Lofte.vector</a>
-                <ul>
-                    <li><a href="vector-logistics.html">Regional Logistics</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Lofte.eco</a>
-                <ul>
-                    <li><a href="encore.html">Encore by Lofte</a></li>
-                    <li><a href="auto-works.html">Auto Works</a></li>
-                    <li><a href="service-works.html">Service Works</a></li>
-                    <li><a href="earth-works.html">Earth Works</a></li>
-                    <li><a href="waste-works.html">Waste Works</a></li>
-                    <li><a href="infrastructure-works.html">Infrastructure Works</a></li>
-                </ul>
-            </li>
+            <h2>LOFTE</h2>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-section">Guardian</li>
+            <ul class="sub-menu">
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Nomad</a></li>
+                <li><a href="#">Global</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Shield</a></li>
+            </ul>
+
+            <li class="nav-section">Media</li>
+            <ul class="sub-menu">
+                <li><a href="music.html">Lofte Music</a></li>
+                <li><a href="tv.html">Lofte TV</a></li>
+                <li><a href="letters.html">Lofte Letters</a></li>
+            </ul>
+
+            <li class="nav-section">Vector</li>
+            <ul class="sub-menu">
+                <li><a href="#">Logistics</a></li>
+            </ul>
+
+            <li class="nav-section">Eco</li>
+            <ul class="sub-menu">
+                <li><a href="#">Encore</a></li>
+                <li><a href="#">Auto Works</a></li>
+                <li><a href="#">Service Works</a></li>
+                <li><a href="#">Earth Works</a></li>
+                <li><a href="#">Waste Works</a></li>
+                <li><a href="#">Infrastructure</a></li>
+            </ul>
         </ul>
-    </nav>
+    </aside>
 
-    <header>
-        <h1>A Private <br><span>Media Sanctuary</span></h1>
-        <p>No algorithms. No tracking.<br><strong>Owned by the Sovereign.</strong></p>
-        <a href="guardian-mobile.html" class="hero-btn">Enter the Sanctuary</a>
-    </header>
-
-    <section class="features">
-        <div class="card">
-            <h3>Music</h3>
-            <p>100M+ songs in lossless fidelity. Human-led radio shows and private discovery.</p>
+    <main>
+        <div class="hero">
+            <h1>The Sovereign <br><span>Sanctuary</span></h1>
+            <p>Private, high-fidelity infrastructure <br>for the modern neighbor.</p>
+            <a href="#" class="btn-main">Enter the Guild</a>
         </div>
-        <div class="card">
-            <h3>Television</h3>
-            <p>Exclusive 4K documentaries and high-trust indie films. Curated, invitation-only talent.</p>
-        </div>
-        <div class="card">
-            <h3>Mobile</h3>
-            <p>5G mobile service with a permanent, Swiss-shielded VPN built into the core network.</p>
-        </div>
-    </section>
+    </main>
 
-    <footer>
-        &copy; 2026 LOFTE SANCTUARY. ALL RIGHTS RESERVED.
-    </footer>
-
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

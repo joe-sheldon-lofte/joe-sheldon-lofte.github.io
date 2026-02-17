@@ -6,11 +6,13 @@
     <title>Lofte Sanctuary | Private Media Network</title>
     <style>
         :root {
-            --bg-color: #0D0D0D;
+            /* Colors extracted from the Lofte logo */
+            --bg-color: #37474F; /* Deep Charcoal Blue-Gray */
+            --accent-color: #7FB095; /* Muted Teal Green */
             --text-color: #FFFFFF;
-            --accent-color: #00FF41; /* Electric Green */
-            --card-bg: #1A1A1A;
+            --card-bg: #455A64; /* Slightly lighter charcoal for cards */
             --font-main: 'Inter', sans-serif;
+            --menu-bg: #263238; /* Darker menu background */
         }
 
         body {
@@ -24,38 +26,80 @@
 
         /* Navigation Bar */
         nav {
-            background: rgba(13, 13, 13, 0.8);
-            backdrop-filter: blur(10px);
+            background: var(--menu-bg);
             position: sticky;
             top: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
-            border-bottom: 1px solid #333;
+            padding: 10px 5%;
+            border-bottom: 2px solid var(--accent-color);
             z-index: 1000;
         }
 
         nav .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--accent-color);
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        nav .links a {
+        /* Dropdown Navigation */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
             color: var(--text-color);
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        nav .links a:hover {
+        nav ul li:hover > a {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        /* Dropdown Content */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--menu-bg);
+            min-width: 220px;
+            border-top: 2px solid var(--accent-color);
+            flex-direction: column;
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+        }
+
+        nav ul ul li a {
+            padding: 10px 20px;
+            text-transform: none;
+            font-size: 0.95rem;
+        }
+
+        nav ul ul li a:hover {
+            background-color: var(--card-bg);
             color: var(--accent-color);
         }
+
 
         /* Hero Section */
         header {
@@ -75,18 +119,19 @@
 
         .hero-btn {
             background-color: var(--accent-color);
-            color: #000;
+            color: var(--bg-color);
             padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             display: inline-block;
             margin-top: 30px;
-            transition: transform 0.2s;
+            transition: transform 0.2s, background-color 0.3s;
         }
 
         .hero-btn:hover {
             transform: scale(1.05);
+            background-color: #A0D6B4; /* Lighter accent on hover */
         }
 
         /* Features Section */
@@ -100,7 +145,7 @@
         .card {
             background-color: var(--card-bg);
             padding: 40px;
-            border: 1px solid #333;
+            border: 1px solid #546E7A;
             border-radius: 10px;
             transition: border-color 0.3s;
         }
@@ -118,9 +163,10 @@
         footer {
             text-align: center;
             padding: 50px;
-            border-top: 1px solid #333;
+            border-top: 1px solid #546E7A;
             font-size: 0.8rem;
-            color: #666;
+            color: #B0BEC5;
+            background-color: var(--menu-bg);
         }
     </style>
 </head>
@@ -128,12 +174,44 @@
 
     <nav>
         <div class="logo">LOFTE</div>
-        <div class="links">
-            <a href="index.html">Home</a>
-            <a href="music.html">Music</a>
-            <a href="tv.html">TV</a>
-            <a href="mobile.html">Mobile</a>
-        </div>
+        <ul>
+            <li>
+                <a href="#">Lofte.guardian</a>
+                <ul>
+                    <li><a href="guardian-mobile.html">Guardian Mobile</a></li>
+                    <li><a href="guardian-home.html">Guardian Home</a></li>
+                    <li><a href="guardian-nomad.html">Guardian Nomad</a></li>
+                    <li><a href="guardian-global.html">Guardian Global</a></li>
+                    <li><a href="guardian-security.html">Guardian Home Security</a></li>
+                    <li><a href="guardian-shield.html">Guardian Shield</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lofte.media</a>
+                <ul>
+                    <li><a href="music.html">Lofte Music</a></li>
+                    <li><a href="tv.html">Lofte TV</a></li>
+                    <li><a href="letters.html">Lofte Letters</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lofte.vector</a>
+                <ul>
+                    <li><a href="vector-logistics.html">Local and Regional Logistics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lofte.eco</a>
+                <ul>
+                    <li><a href="encore.html">Encore by Lofte</a></li>
+                    <li><a href="auto-works.html">Auto Works</a></li>
+                    <li><a href="service-works.html">Service Works</a></li>
+                    <li><a href="earth-works.html">Earth Works</a></li>
+                    <li><a href="waste-works.html">Waste Works</a></li>
+                    <li><a href="infrastructure-works.html">Infrastructure Works</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
     <header>

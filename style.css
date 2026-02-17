@@ -1,0 +1,218 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-color: #FFFFFF;
+    --text-main: #37474F;      /* Charcoal Blue-Gray */
+    --accent-teal: #7FB095;    /* Muted Teal Green */
+    --accent-rust: #C26D45;    /* Encore Rust (Approx from logo) */
+    --light-gray: #F9FBFB;     /* Faint sidebar/background tint */
+    --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* --- RESET & GLOBAL --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; text-transform: uppercase; }
+p { font-weight: 400; color: #546E7A; }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    text-align: center;
+    padding: 60px 0 80px 0;
+}
+
+.logo-container img.main-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.headline {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.sub-headline {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- BUTTONS --- */
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+}
+
+.cta-button.primary {
+    background-color: var(--text-main);
+    color: white;
+}
+
+.cta-button.primary:hover {
+    background-color: var(--accent-teal);
+    transform: translateY(-2px);
+}
+
+/* --- DIVIDER --- */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #E0E0E0;
+    margin: 40px 0;
+}
+
+/* --- CARDS GRID --- */
+.divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background: var(--light-gray);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-teal);
+}
+
+.card-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icon img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Placeholder for Vector */
+.card-icon.placeholder {
+    border: 2px solid var(--text-main);
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%; /* Circle to match Lofte style */
+}
+.vector-text { font-size: 0.6rem; font-weight: 800; }
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.status-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* --- ENCORE SPECIFIC OVERRIDES --- */
+.encore-card:hover {
+    border-color: var(--accent-rust);
+}
+
+.encore-card .status-tag {
+    color: var(--accent-rust);
+    border-color: var(--accent-rust);
+}
+
+/* --- WAITLIST SECTION --- */
+.waitlist-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--light-gray);
+    border-radius: 12px;
+}
+
+.waitlist-section h2 { margin-bottom: 10px; }
+.waitlist-section p { margin-bottom: 30px; }
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form input {
+    padding: 15px;
+    border: 1px solid #CFD8DC;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-stack);
+}
+
+.cta-button.secondary {
+    background-color: var(--accent-teal);
+    color: white;
+}
+.cta-button.secondary:hover {
+    background-color: var(--text-main);
+}
+
+.small-print {
+    font-size: 0.75rem;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.8rem;
+    color: #90A4AE;
+}
+
+/* --- MOBILE OPTIMIZATION --- */
+@media (max-width: 600px) {
+    .headline { font-size: 2.5rem; }
+    .signup-form { width: 100%; }
+}

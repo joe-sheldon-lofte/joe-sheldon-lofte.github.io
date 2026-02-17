@@ -3,116 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lofte Sanctuary | Sovereign Media</title>
+    <title>Lofte Sanctuary</title>
     <style>
         :root {
             --bg-color: #FFFFFF;
-            --sidebar-bg: #F8F9FA;
-            --text-color: #37474F; /* Your Charcoal */
-            --accent-color: #7FB095; /* Your Teal Green */
-            --border-color: #E0E0E0;
-            --font-main: 'Inter', -apple-system, sans-serif;
+            --text-color: #37474F; /* Your Logo Charcoal */
+            --accent-color: #7FB095; /* Your Logo Teal */
+            --sidebar-bg: #FDFDFD;
+            --border-color: #EEEEEE;
         }
 
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-main);
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             min-height: 100vh;
         }
 
-        /* Sidebar Navigation */
+        /* Sidebar - Fixed on left */
         #sidebar {
-            width: 280px;
-            background-color: var(--sidebar-bg);
+            width: 260px;
+            background: var(--sidebar-bg);
             border-right: 1px solid var(--border-color);
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
             overflow-y: auto;
-            transition: transform 0.3s ease;
-            z-index: 1001;
-            padding-bottom: 40px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            padding: 20px;
         }
 
-        .sidebar-header {
-            padding: 30px 20px;
+        .logo-area {
             text-align: center;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
         }
 
-        .sidebar-header img {
-            width: 80px;
+        .logo-area img {
+            width: 100px;
             height: auto;
-            margin-bottom: 10px;
-        }
-
-        .sidebar-header h2 {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin: 0;
-            color: var(--text-color);
-        }
-
-        /* Nav Menu Links */
-        .nav-menu { list-style: none; padding: 20px 0; margin: 0; }
-        
-        .nav-section {
-            padding: 15px 25px 5px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            letter-spacing: 1.5px;
-        }
-
-        .nav-menu li a {
             display: block;
-            padding: 12px 25px;
+            margin: 0 auto 10px;
+        }
+
+        .logo-area h2 {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+
+        /* Menu Styling */
+        .menu-section {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-color);
+            font-weight: 900;
+            margin: 20px 0 10px 10px;
+        }
+
+        nav ul { list-style: none; }
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
             text-decoration: none;
             color: var(--text-color);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.2s;
+            border-radius: 6px;
+            transition: 0.2s;
         }
 
-        .nav-menu li a:hover {
-            background-color: white;
+        nav ul li a:hover {
+            background: #F0F4F2;
             color: var(--accent-color);
-            padding-left: 30px;
         }
 
-        /* Sub-items (Services) */
-        .sub-menu {
-            list-style: none;
-            padding: 0 0 10px 15px;
-        }
-        
-        .sub-menu li a {
-            padding: 8px 25px;
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        /* Main Content Area */
+        /* Main Content */
         main {
             flex: 1;
-            margin-left: 280px; /* Width of sidebar */
+            margin-left: 260px;
             padding: 60px 10%;
-            transition: margin-left 0.3s ease;
+            text-align: center;
+            transition: 0.3s;
         }
 
-        .hero { text-align: center; margin-top: 50px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 900; }
-        .hero p { font-size: 1.2rem; color: #607D8B; }
+        h1 { font-size: 3rem; font-weight: 900; margin-bottom: 20px; }
+        p { font-size: 1.2rem; color: #78909C; max-width: 600px; margin: 0 auto; }
 
-        /* Mobile Adjustments */
-        .mobile-toggle {
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 16px 40px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Mobile Logic */
+        .toggle-btn {
             display: none;
             position: fixed;
             top: 20px;
@@ -120,68 +117,56 @@
             background: var(--accent-color);
             color: white;
             border: none;
-            padding: 12px 18px;
-            border-radius: 5px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: bold;
-            z-index: 1002;
-            cursor: pointer;
+            z-index: 1100;
         }
 
         @media (max-width: 900px) {
             #sidebar { transform: translateX(-100%); }
-            #sidebar.open { transform: translateX(0); }
-            main { margin-left: 0; padding: 100px 5%; }
-            .mobile-toggle { display: block; }
-            .hero h1 { font-size: 2.2rem; }
-        }
-
-        .btn-main {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 35px;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
+            #sidebar.active { transform: translateX(0); box-shadow: 10px 0 30px rgba(0,0,0,0.05); }
+            main { margin-left: 0; padding-top: 100px; }
+            .toggle-btn { display: block; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <button class="mobile-toggle" onclick="toggleMenu()">MENU</button>
+    <button class="toggle-btn" onclick="toggleSidebar()">MENU</button>
 
     <aside id="sidebar">
-        <div class="sidebar-header">
+        <div class="logo-area">
             <img src="logo.png" alt="Lofte Logo">
             <h2>LOFTE</h2>
         </div>
-        
-        <ul class="nav-menu">
-            <li class="nav-section">Guardian</li>
-            <ul class="sub-menu">
-                <li><a href="#">Mobile</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Nomad</a></li>
-                <li><a href="#">Global</a></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#">Shield</a></li>
+
+        <nav>
+            <div class="menu-section">Lofte.guardian</div>
+            <ul>
+                <li><a href="#">Guardian Mobile</a></li>
+                <li><a href="#">Guardian Home</a></li>
+                <li><a href="#">Guardian Nomad</a></li>
+                <li><a href="#">Guardian Global</a></li>
+                <li><a href="#">Guardian Security</a></li>
+                <li><a href="#">Guardian Shield</a></li>
             </ul>
 
-            <li class="nav-section">Media</li>
-            <ul class="sub-menu">
+            <div class="menu-section">Lofte.media</div>
+            <ul>
                 <li><a href="music.html">Lofte Music</a></li>
                 <li><a href="tv.html">Lofte TV</a></li>
                 <li><a href="letters.html">Lofte Letters</a></li>
             </ul>
 
-            <li class="nav-section">Vector</li>
-            <ul class="sub-menu">
+            <div class="menu-section">Lofte.vector</div>
+            <ul>
                 <li><a href="#">Logistics</a></li>
             </ul>
 
-            <li class="nav-section">Eco</li>
-            <ul class="sub-menu">
+            <div class="menu-section">Lofte.eco</div>
+            <ul>
                 <li><a href="#">Encore</a></li>
                 <li><a href="#">Auto Works</a></li>
                 <li><a href="#">Service Works</a></li>
@@ -189,20 +174,18 @@
                 <li><a href="#">Waste Works</a></li>
                 <li><a href="#">Infrastructure</a></li>
             </ul>
-        </ul>
+        </nav>
     </aside>
 
     <main>
-        <div class="hero">
-            <h1>The Sovereign <br><span>Sanctuary</span></h1>
-            <p>Private, high-fidelity infrastructure <br>for the modern neighbor.</p>
-            <a href="#" class="btn-main">Enter the Guild</a>
-        </div>
+        <h1>The Sovereign <br>Sanctuary</h1>
+        <p>Private infrastructure for the modern neighbor. High-fidelity, human-led, and entirely yours.</p>
+        <a href="#" class="btn">Enter the Guild</a>
     </main>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('sidebar').classList.toggle('open');
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
         }
     </script>
 </body>

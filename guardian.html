@@ -6,6 +6,39 @@
     <title>Lofte Guardian | The Invisible Network</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Inline style for the new Business Section to avoid editing CSS again */
+        .business-section {
+            background-color: #37474F;
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+        }
+        .business-section h3 { margin-bottom: 10px; color: white; }
+        .business-section p { color: #CFD8DC; margin-bottom: 20px; }
+        .business-btn {
+            background-color: white;
+            color: #37474F;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .business-btn:hover { background-color: #ECEFF1; }
+        
+        /* Style for the "Includes Taxes" note */
+        .tax-note {
+            display: block;
+            font-size: 0.9rem;
+            color: #7FB095; /* Teal */
+            font-weight: 700;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -52,10 +85,11 @@
 
         <div style="text-align: center;">
             <span class="section-title">Guardian Mobile Services</span>
-            <p style="margin-bottom: 40px;">Unlimited Talk & Text on all plans.</p>
+            <p style="margin-bottom: 5px;">Unlimited Talk & Text on all plans.</p>
+            <span class="tax-note">All pricing includes taxes & fees. What you see is what you pay.</span>
         </div>
 
-        <section class="pricing-grid">
+        <section class="pricing-grid" style="margin-top: 40px;">
             
             <div class="price-card">
                 <span class="plan-name">Lite</span>
@@ -124,12 +158,19 @@
 
         </section>
 
-        <div style="text-align: center; margin-top: 80px;">
-            <span class="section-title">Guardian Home Internet</span>
-            <p style="margin-bottom: 40px;">5G Fixed Wireless Access with Lofte Secure Router technology.</p>
+        <div class="business-section">
+            <h3>Business & Organization Solutions</h3>
+            <p>Need 10+ lines or a custom security architecture? We provide bespoke quotes for enterprises, journalists, and NGOs.</p>
+            <a href="mailto:guardian@lofte.online?subject=Business Inquiry" class="business-btn">Request Custom Quote</a>
         </div>
 
-        <section class="pricing-grid" style="justify-content: center;">
+        <div style="text-align: center; margin-top: 80px;">
+            <span class="section-title">Guardian Home Internet</span>
+            <p style="margin-bottom: 5px;">5G Fixed Wireless Access with Lofte Secure Router technology.</p>
+            <span class="tax-note">All pricing includes taxes & fees.</span>
+        </div>
+
+        <section class="pricing-grid" style="justify-content: center; margin-top: 40px;">
             <div class="price-card" style="max-width: 350px;">
                 <span class="plan-name">Home Internet</span>
                 <span class="price">$60<span>/mo</span></span>

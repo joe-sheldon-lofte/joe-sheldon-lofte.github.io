@@ -144,7 +144,8 @@ p { font-weight: 400; color: #546E7A; }
 /* --- CARDS GRID --- */
 .divisions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Increased min-width to 320px to fit larger icons better */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 80px;
 }
@@ -164,17 +165,17 @@ p { font-weight: 400; color: #546E7A; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* THE "WHITE BOX" LOGO CONTAINER (SQUARE VERSION) */
+/* THE "WHITE BOX" LOGO CONTAINER (2X LARGER) */
 .card-icon {
-    width: 140px;
-    height: 140px;
+    width: 220px;              /* Increased from 140px */
+    height: 220px;             /* Increased from 140px */
     background-color: #FFFFFF;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px auto;
-    padding: 25px;
+    padding: 30px;             /* Slightly increased padding */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
@@ -242,7 +243,7 @@ p { font-weight: 400; color: #546E7A; }
     opacity: 0.7;
 }
 
-/* --- FOOTER (UPDATED) --- */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 60px 0;
@@ -254,7 +255,7 @@ footer {
 
 footer p {
     margin-bottom: 8px;
-    color: #90A4AE; /* Ensures overrides global p color */
+    color: #90A4AE;
 }
 
 footer a {
@@ -271,4 +272,10 @@ footer a:hover {
     .headline { font-size: 2.2rem; }
     .logo-container img.main-logo { width: 100%; }
     .definition-block { padding: 20px; }
+    
+    /* Mobile adjustment for big icons */
+    .card-icon {
+        width: 180px; 
+        height: 180px; 
+    }
 }

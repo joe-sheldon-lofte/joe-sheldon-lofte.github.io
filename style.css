@@ -1,15 +1,17 @@
 /* --- VARIABLES --- */
 :root {
     --bg-color: #FFFFFF;
-    --text-main: #37474F;      /* Charcoal Blue-Gray */
-    --accent-teal: #7FB095;    /* Muted Teal Green */
+    --text-main: #37474F;      
+    --accent-teal: #7FB095;    
+    --accent-dark: #263238;    /* Darker accent for High Risk plan */
     
     /* Collection Specific Colors */
     --collection-bronze: #A67C52; 
     --collection-green: #1B443C;
 
-    /* Card Background */
-    --card-bg: #ECEFF1;        /* Cool Mist Gray */
+    /* Card Backgrounds */
+    --card-bg: #ECEFF1;        
+    --card-bg-light: #F5F7F8;
     
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -26,16 +28,44 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px; /* Slightly wider for pricing tables */
     margin: 0 auto;
     padding: 60px 20px;
 }
 
+a { text-decoration: none; color: inherit; }
+
+/* --- NAVIGATION --- */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.back-link {
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+.back-link:hover { color: var(--accent-teal); }
+
 /* --- TYPOGRAPHY --- */
-h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; text-transform: uppercase; }
+h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.03em; text-transform: uppercase; }
 p { font-weight: 400; color: #546E7A; }
 
-/* --- HERO SECTION --- */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ECEFF1;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+/* --- HERO SECTION (Global) --- */
 .hero-section {
     text-align: center;
     padding: 40px 0 60px 0;
@@ -72,48 +102,17 @@ p { font-weight: 400; color: #546E7A; }
     border-radius: 0 8px 8px 0;
 }
 
-.word-title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--text-main);
-    margin-right: 15px;
-    letter-spacing: -0.02em;
-}
-
-.phonetic {
-    font-family: monospace;
-    color: var(--accent-teal);
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.word-meta {
-    margin-bottom: 20px;
-    display: block;
-    font-size: 0.85rem;
-    color: #90A4AE;
-    font-style: italic;
-}
-
-.def-item {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-    color: #455A64;
-    line-height: 1.5;
-}
-
-.def-number {
-    font-weight: 700;
-    color: var(--accent-teal);
-    margin-right: 8px;
-}
+.word-title { font-size: 2rem; font-weight: 800; margin-right: 15px; letter-spacing: -0.02em; }
+.phonetic { font-family: monospace; color: var(--accent-teal); font-weight: 600; }
+.word-meta { display: block; font-size: 0.85rem; color: #90A4AE; font-style: italic; margin-bottom: 20px; }
+.def-item { margin-bottom: 15px; color: #455A64; }
+.def-number { font-weight: 700; color: var(--accent-teal); margin-right: 8px; }
 
 /* --- BUTTONS --- */
 .cta-button {
     display: inline-block;
     padding: 15px 35px;
     font-weight: 600;
-    text-decoration: none;
     border-radius: 4px;
     transition: all 0.2s ease;
     text-transform: uppercase;
@@ -122,29 +121,12 @@ p { font-weight: 400; color: #546E7A; }
     cursor: pointer;
     border: none;
 }
+.cta-button.primary { background-color: var(--text-main); color: white; }
+.cta-button.primary:hover { background-color: var(--accent-teal); transform: translateY(-2px); }
 
-.cta-button.primary {
-    background-color: var(--text-main);
-    color: white;
-}
-
-.cta-button.primary:hover {
-    background-color: var(--accent-teal);
-    transform: translateY(-2px);
-}
-
-/* --- DIVIDER --- */
-.divider {
-    border: 0;
-    height: 1px;
-    background: #E0E0E0;
-    margin: 60px 0;
-}
-
-/* --- CARDS GRID --- */
+/* --- DIVISIONS GRID (Home Page) --- */
 .divisions-grid {
     display: grid;
-    /* Increased min-width to 320px to fit larger icons better */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 80px;
@@ -155,8 +137,9 @@ p { font-weight: 400; color: #546E7A; }
     padding: 50px 30px;
     border-radius: 12px;
     text-align: center;
-    border: 2px solid transparent;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer; /* Indicates clickable */
 }
 
 .card:hover {
@@ -165,35 +148,28 @@ p { font-weight: 400; color: #546E7A; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* THE "WHITE BOX" LOGO CONTAINER (2X LARGER) */
+/* THE "WHITE BOX" LOGO CONTAINER (UPDATED: HUGE) */
 .card-icon {
-    width: 220px;              /* Increased from 140px */
-    height: 220px;             /* Increased from 140px */
+    width: 240px;             /* Massive size */
+    height: 240px;            
     background-color: #FFFFFF;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px auto;
-    padding: 30px;             /* Slightly increased padding */
+    padding: 10px;            /* Minimal padding to maximize logo size */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .card-icon img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* Ensures logo fills the square */
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    font-size: 1.25rem;
-}
-
-.card-desc {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
+.card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+.card-desc { font-size: 0.95rem; margin-bottom: 20px; }
 
 .status-tag {
     display: inline-block;
@@ -207,40 +183,98 @@ p { font-weight: 400; color: #546E7A; }
     background-color: rgba(255,255,255,0.5);
 }
 
-/* --- COLLECTION SPECIFIC OVERRIDES --- */
-.collection-card:hover {
-    border-color: var(--collection-bronze);
+/* --- GUARDIAN SPECIFIC STYLES --- */
+
+/* Feature Icons Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 80px;
 }
-.collection-card .status-tag {
-    color: var(--collection-bronze);
-    border-color: var(--collection-bronze);
+.tech-item {
+    background: var(--card-bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-teal);
 }
-.collection-card h3 {
-    color: var(--collection-green);
+.tech-item h4 { margin-bottom: 10px; color: var(--text-main); }
+.tech-item p { font-size: 0.9rem; }
+
+/* Pricing Table */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 80px;
 }
 
-/* --- WAITLIST SECTION --- */
-.waitlist-section {
+.price-card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 40px 30px;
     text-align: center;
-    padding: 60px 20px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
+    transition: transform 0.2s;
+    position: relative;
 }
 
-.waitlist-section h2 { margin-bottom: 10px; }
-.waitlist-section p { margin-bottom: 30px; }
+.price-card:hover { transform: translateY(-5px); border-color: var(--accent-teal); }
 
+/* Highlight the Standard Plan */
+.price-card.featured {
+    border: 2px solid var(--accent-teal);
+    background: #F9FBFB;
+}
+
+/* Highlight the High Risk Plan */
+.price-card.high-risk {
+    background: var(--text-main);
+    color: white;
+    border: none;
+}
+.price-card.high-risk h3, .price-card.high-risk .price, .price-card.high-risk p {
+    color: white;
+}
+.price-card.high-risk ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.plan-name { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; display: block; }
+.price { font-size: 2.5rem; font-weight: 300; margin-bottom: 20px; display: block; }
+.price span { font-size: 1rem; color: #90A4AE; }
+.price-card.high-risk .price span { color: #CFD8DC; }
+
+.features-list { list-style: none; text-align: left; margin: 20px 0 30px 0; }
+.features-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ECEFF1;
+    font-size: 0.9rem;
+}
+.features-list li:last-child { border-bottom: none; }
+
+/* Roadmap Section */
+.roadmap-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+.roadmap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ECEFF1;
+}
+.roadmap-title { font-weight: 700; }
+.roadmap-status { font-size: 0.8rem; background: #ECEFF1; padding: 5px 10px; border-radius: 4px; }
+
+/* --- FORMALOO CONTAINER --- */
 .formaloo-container {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     min-height: 200px;
-}
-
-.small-print {
-    font-size: 0.75rem;
-    margin-top: 20px;
-    opacity: 0.7;
 }
 
 /* --- FOOTER --- */
@@ -252,30 +286,12 @@ footer {
     border-top: 1px solid #ECEFF1;
     margin-top: 40px;
 }
+footer a { color: #90A4AE; text-decoration: none; }
+footer a:hover { color: var(--accent-teal); }
 
-footer p {
-    margin-bottom: 8px;
-    color: #90A4AE;
-}
-
-footer a {
-    color: #90A4AE;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-footer a:hover {
-    color: var(--accent-teal);
-}
-
+/* --- MOBILE --- */
 @media (max-width: 600px) {
     .headline { font-size: 2.2rem; }
-    .logo-container img.main-logo { width: 100%; }
-    .definition-block { padding: 20px; }
-    
-    /* Mobile adjustment for big icons */
-    .card-icon {
-        width: 180px; 
-        height: 180px; 
-    }
+    .roadmap-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .card-icon { width: 180px; height: 180px; }
 }

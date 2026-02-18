@@ -124,13 +124,12 @@ p { font-weight: 400; color: #546E7A; }
 .cta-button.primary { background-color: var(--text-main); color: white; }
 .cta-button.primary:hover { background-color: var(--accent-teal); transform: translateY(-2px); }
 
-/* --- DIVIDER (FIXED) --- */
-/* Changed from a visible line to a clean spacer to fix mobile layout issues */
+/* --- DIVIDER --- */
 .divider {
     border: 0;
     height: 1px;
-    background: transparent; /* Invisible */
-    margin: 80px 0;          /* Increased spacing for breathing room */
+    background: transparent; 
+    margin: 80px 0;          
 }
 
 /* --- DIVISIONS GRID --- */
@@ -190,7 +189,6 @@ p { font-weight: 400; color: #546E7A; }
     background-color: rgba(255,255,255,0.5);
 }
 
-/* Specific style for the Launch Date tag */
 .launch-tag {
     background-color: var(--accent-teal);
     color: white;
@@ -266,6 +264,24 @@ p { font-weight: 400; color: #546E7A; }
 }
 .roadmap-title { font-weight: 700; }
 .roadmap-status { font-size: 0.8rem; background: #ECEFF1; padding: 5px 10px; border-radius: 4px; }
+.roadmap-desc { font-size: 0.9rem; color: #546E7A; flex-grow: 1; margin: 0 20px; }
+
+/* --- CANARY STYLES --- */
+.canary-box {
+    background-color: #F5F7F8;
+    border: 2px solid #37474F;
+    padding: 40px;
+    font-family: monospace; /* Typewriter look */
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: left;
+}
+.canary-date {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent-teal);
+}
 
 /* --- FORMALOO CONTAINER --- */
 .formaloo-container {
@@ -285,11 +301,12 @@ footer {
     margin-top: 40px;
 }
 footer p { margin-bottom: 8px; color: #90A4AE; }
-footer a { color: #90A4AE; text-decoration: none; }
+footer a { color: #90A4AE; text-decoration: none; margin: 0 5px; }
 footer a:hover { color: var(--accent-teal); }
 
 @media (max-width: 600px) {
     .headline { font-size: 2.2rem; }
     .roadmap-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .roadmap-desc { margin: 0; }
     .card-icon { width: 100%; height: auto; aspect-ratio: 1/1; }
 }

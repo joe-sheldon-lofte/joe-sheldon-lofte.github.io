@@ -4,11 +4,11 @@
     --text-main: #37474F;      /* Charcoal Blue-Gray */
     --accent-teal: #7FB095;    /* Muted Teal Green */
     
-    /* Collection Specific Colors (Extracted from Logo) */
+    /* Collection Specific Colors */
     --collection-bronze: #A67C52; 
     --collection-green: #1B443C;
 
-    /* Card Background - Darkened as requested */
+    /* Card Background */
     --card-bg: #ECEFF1;        /* Cool Mist Gray */
     
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,7 +38,7 @@ p { font-weight: 400; color: #546E7A; }
 /* --- HERO SECTION --- */
 .hero-section {
     text-align: center;
-    padding: 40px 0 80px 0;
+    padding: 40px 0 60px 0;
 }
 
 .logo-container img.main-logo {
@@ -59,6 +59,53 @@ p { font-weight: 400; color: #546E7A; }
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 40px auto;
+}
+
+/* --- DEFINITION BLOCK --- */
+.definition-block {
+    text-align: left;
+    max-width: 480px;
+    margin: 0 auto 60px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-teal);
+    border-radius: 0 8px 8px 0;
+}
+
+.word-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-right: 15px;
+    letter-spacing: -0.02em;
+}
+
+.phonetic {
+    font-family: monospace;
+    color: var(--accent-teal);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.word-meta {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 0.85rem;
+    color: #90A4AE;
+    font-style: italic;
+}
+
+.def-item {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #455A64;
+    line-height: 1.5;
+}
+
+.def-number {
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-right: 8px;
 }
 
 /* --- BUTTONS --- */
@@ -103,7 +150,7 @@ p { font-weight: 400; color: #546E7A; }
 }
 
 .card {
-    background: var(--card-bg); /* Darker gray background */
+    background: var(--card-bg);
     padding: 50px 30px;
     border-radius: 12px;
     text-align: center;
@@ -113,22 +160,22 @@ p { font-weight: 400; color: #546E7A; }
 
 .card:hover {
     border-color: var(--accent-teal);
-    background: #FFFFFF; /* Brighten on hover */
+    background: #FFFFFF;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* THE "WHITE BOX" LOGO CONTAINER */
+/* THE "WHITE BOX" LOGO CONTAINER (SQUARE VERSION) */
 .card-icon {
     width: 140px;
     height: 140px;
-    background-color: #FFFFFF; /* Pure white background behind logo */
-    border-radius: 50%;        /* Makes it a perfect circle */
+    background-color: #FFFFFF;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px auto;
-    padding: 25px;             /* Internal padding so logo doesn't touch edges */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Subtle lift */
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .card-icon img {
@@ -182,7 +229,6 @@ p { font-weight: 400; color: #546E7A; }
 .waitlist-section h2 { margin-bottom: 10px; }
 .waitlist-section p { margin-bottom: 30px; }
 
-/* Styles for the Formaloo container */
 .formaloo-container {
     width: 100%;
     max-width: 600px;
@@ -196,14 +242,33 @@ p { font-weight: 400; color: #546E7A; }
     opacity: 0.7;
 }
 
+/* --- FOOTER (UPDATED) --- */
 footer {
     text-align: center;
-    padding: 40px 0;
-    font-size: 0.8rem;
+    padding: 60px 0;
+    font-size: 0.85rem;
     color: #90A4AE;
+    border-top: 1px solid #ECEFF1;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #90A4AE; /* Ensures overrides global p color */
+}
+
+footer a {
+    color: #90A4AE;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--accent-teal);
 }
 
 @media (max-width: 600px) {
     .headline { font-size: 2.2rem; }
     .logo-container img.main-logo { width: 100%; }
+    .definition-block { padding: 20px; }
 }

@@ -3,7 +3,7 @@
     --bg-color: #FFFFFF;
     --text-main: #37474F;      /* Charcoal Blue-Gray */
     --accent-teal: #7FB095;    /* Muted Teal Green */
-    --accent-rust: #C26D45;    /* Encore Rust (Approx from logo) */
+    --accent-rust: #C26D45;    /* Encore Rust (Kept for future use) */
     --light-gray: #F9FBFB;     /* Faint sidebar/background tint */
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -22,7 +22,7 @@ body {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px; /* Increased top padding for better breathing room */
 }
 
 /* --- TYPOGRAPHY --- */
@@ -32,13 +32,14 @@ p { font-weight: 400; color: #546E7A; }
 /* --- HERO SECTION --- */
 .hero-section {
     text-align: center;
-    padding: 60px 0 80px 0;
+    padding: 40px 0 80px 0;
 }
 
 .logo-container img.main-logo {
-    width: 120px;
+    width: 480px;       /* 4x Larger (Huge impact) */
+    max-width: 85vw;    /* Safety: Never wider than 85% of the screen width */
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .headline {
@@ -84,7 +85,7 @@ p { font-weight: 400; color: #546E7A; }
     border: 0;
     height: 1px;
     background: #E0E0E0;
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 /* --- CARDS GRID --- */
@@ -97,7 +98,7 @@ p { font-weight: 400; color: #546E7A; }
 
 .card {
     background: var(--light-gray);
-    padding: 40px 30px;
+    padding: 50px 30px; /* Slightly more padding for taller icons */
     border-radius: 8px;
     text-align: center;
     border: 1px solid transparent;
@@ -109,36 +110,35 @@ p { font-weight: 400; color: #546E7A; }
 }
 
 .card-icon {
-    height: 80px;
+    height: 120px;      /* 1.5x Larger (was 80px) */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .card-icon img {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Ensures logos scale perfectly inside the 120px box */
 }
 
-/* Placeholder for Vector */
+/* Placeholder adjustments for the larger size */
 .card-icon.placeholder {
-    border: 2px solid var(--text-main);
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px auto;
-    border-radius: 50%; /* Circle to match Lofte style */
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px auto;
+    border-radius: 50%;
 }
-.vector-text { font-size: 0.6rem; font-weight: 800; }
+.vector-text { font-size: 0.8rem; font-weight: 800; }
 
 .card h3 {
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1.25rem; /* Slightly larger title to match icon */
 }
 
 .card-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
@@ -151,16 +151,6 @@ p { font-weight: 400; color: #546E7A; }
     padding: 4px 10px;
     border-radius: 20px;
     text-transform: uppercase;
-}
-
-/* --- ENCORE SPECIFIC OVERRIDES --- */
-.encore-card:hover {
-    border-color: var(--accent-rust);
-}
-
-.encore-card .status-tag {
-    color: var(--accent-rust);
-    border-color: var(--accent-rust);
 }
 
 /* --- WAITLIST SECTION --- */
@@ -213,6 +203,11 @@ footer {
 
 /* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 600px) {
-    .headline { font-size: 2.5rem; }
+    .headline { font-size: 2.2rem; }
     .signup-form { width: 100%; }
+    
+    /* On very small phones, we scale the logo down slightly to fit */
+    .logo-container img.main-logo {
+        width: 100%; 
+    }
 }

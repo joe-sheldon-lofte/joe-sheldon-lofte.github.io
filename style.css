@@ -3,7 +3,7 @@
     --bg-color: #FFFFFF;
     --text-main: #37474F;      
     --accent-teal: #7FB095;    
-    --accent-dark: #263238;    /* Darker accent for High Risk plan */
+    --accent-dark: #263238;    
     
     /* Collection Specific Colors */
     --collection-bronze: #A67C52; 
@@ -124,6 +124,15 @@ p { font-weight: 400; color: #546E7A; }
 .cta-button.primary { background-color: var(--text-main); color: white; }
 .cta-button.primary:hover { background-color: var(--accent-teal); transform: translateY(-2px); }
 
+/* --- DIVIDER (FIXED) --- */
+/* Changed from a visible line to a clean spacer to fix mobile layout issues */
+.divider {
+    border: 0;
+    height: 1px;
+    background: transparent; /* Invisible */
+    margin: 80px 0;          /* Increased spacing for breathing room */
+}
+
 /* --- DIVISIONS GRID --- */
 .divisions-grid {
     display: grid;
@@ -147,17 +156,16 @@ p { font-weight: 400; color: #546E7A; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* THE DIVISION LOGOS (MASSIVE UPDATE) */
 .card-icon {
-    width: 280px;             /* Increased to 280px */
-    height: 280px;            /* Increased to 280px */
+    width: 280px;
+    height: 280px;
     background-color: #FFFFFF;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px auto;
-    padding: 15px;            /* Reduced padding so logo fills the box */
+    padding: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
@@ -180,6 +188,13 @@ p { font-weight: 400; color: #546E7A; }
     border-radius: 20px;
     text-transform: uppercase;
     background-color: rgba(255,255,255,0.5);
+}
+
+/* Specific style for the Launch Date tag */
+.launch-tag {
+    background-color: var(--accent-teal);
+    color: white;
+    border: none;
 }
 
 /* --- GUARDIAN SPECIFIC STYLES --- */
@@ -213,12 +228,13 @@ p { font-weight: 400; color: #546E7A; }
     text-align: center;
     transition: transform 0.2s;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .price-card:hover { transform: translateY(-5px); border-color: var(--accent-teal); }
 .price-card.featured { border: 2px solid var(--accent-teal); background: #F9FBFB; }
 
-/* High Risk Plan Styling */
 .price-card.high-risk {
     background: var(--text-main);
     color: white;
@@ -232,7 +248,7 @@ p { font-weight: 400; color: #546E7A; }
 .price span { font-size: 1rem; color: #90A4AE; }
 .price-card.high-risk .price span { color: #CFD8DC; }
 
-.features-list { list-style: none; text-align: left; margin: 20px 0 30px 0; }
+.features-list { list-style: none; text-align: left; margin: 20px 0 30px 0; flex-grow: 1; }
 .features-list li {
     padding: 10px 0;
     border-bottom: 1px solid #ECEFF1;
@@ -275,5 +291,5 @@ footer a:hover { color: var(--accent-teal); }
 @media (max-width: 600px) {
     .headline { font-size: 2.2rem; }
     .roadmap-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .card-icon { width: 100%; height: auto; aspect-ratio: 1/1; } /* Full width on mobile */
+    .card-icon { width: 100%; height: auto; aspect-ratio: 1/1; }
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofte Collection | The Ultimate Transport Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Swap out the standard colors for the Collection's Green & Bronze */
+            --text-main: #1B443C;      /* Forest Green */
+            --accent-teal: #A67C52;    /* Champagne Bronze */
+            --card-bg: #F4F6F5;        /* Very light mist green/gray */
+            --bg-color: #FCFCFC;       /* Gallery White */
+        }
+
+        /* Dark, Moody Hero Section */
+        .collection-hero {
+            background-color: var(--text-main);
+            color: white;
+            padding: 80px 20px 100px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(27, 68, 60, 0.15);
+        }
+        .collection-hero .headline { color: white; }
+        .collection-hero .sub-headline { color: #E8EDE1; }
+        .collection-hero .gold-accent { color: var(--accent-teal); font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 20px; display: block; }
+
+        /* The Metal Key Card Style */
+        .vault-card {
+            background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-teal);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .vault-card h3 { color: var(--accent-teal); font-size: 2rem; margin-bottom: 10px; }
+        .vault-card p { color: #CFD8DC; max-width: 500px; }
+        
+        @media (max-width: 768px) {
+            .vault-card { flex-direction: column; text-align: center; }
+            .vault-card p { margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="nav-header">
+            <a href="index.html" class="back-link">← Return to Lofte</a>
+            <img src="assets/images/collection-logo.png" alt="Lofte Collection" style="height: 40px;">
+        </nav>
+
+        <header class="collection-hero">
+            <span class="gold-accent">The Private Office Experience</span>
+            <h1 class="headline">ELEVATING EVERY<br>JOURNEY</h1>
+            <p class="sub-headline" style="max-width: 700px; margin: 0 auto;">
+                Whether you are commissioning a $500,000 electric hydrofoil or brokering a daily commuter, Lofte Collection delivers the exact same world-class, white-glove reverence. We don't just sell vehicles; we manage your lifetime transport portfolio.
+            </p>
+        </header>
+
+        <hr class="divider">
+
+        <div style="text-align: center;">
+            <span class="section-title">The Master Portfolio</span>
+        </div>
+
+        <section class="tech-grid">
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">Road</h4>
+                <p><strong>The Auto Brokerage:</strong> From ultra-luxury EVs to your favorite mass-market brands. Test drive in a chauffeured Escalade IQ. Take delivery via our nationwide "Intercept" white-glove prep service.</p>
+            </div>
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">Water</h4>
+                <p><strong>Lofte Marine:</strong> The premiere PNW hub for Candela and X Shore electric vessels. We handle everything from slip leasing to winterization and battery Deep Sleep management.</p>
+            </div>
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">Land</h4>
+                <p><strong>Powersports & Estate:</strong> Essential equipment for the modern estate. Featuring Stark Varg electric motorcycles, Polaris Ranger Kinetics, and Monarch autonomous tractors.</p>
+            </div>
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">Energy</h4>
+                <p><strong>Power Oasis:</strong> Battery-backed charging hubs providing high-speed top-ups, emergency resilience, and Starlink connectivity for remote communities.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <span class="section-title">The Physical Infrastructure</span>
+            <p style="margin-bottom: 40px;">Where the digital experience meets the physical world.</p>
+        </div>
+
+        <section class="pricing-grid" style="justify-content: center;">
+            <div class="price-card" style="border-top: 4px solid var(--text-main);">
+                <span class="plan-name" style="color: var(--text-main); font-size: 1.5rem;">The Flagship</span>
+                <span style="display: block; font-weight: 600; color: var(--accent-teal); margin-bottom: 20px;">Woodinville, WA</span>
+                <p style="text-align: left; margin-bottom: 15px;"><strong>The Gallery:</strong> A vintage-modern showroom featuring the pinnacle of electric transport.</p>
+                <p style="text-align: left; margin-bottom: 15px;"><strong>The Sandbox:</strong> 40,000 sq. ft. of indoor dirt, gravel, and grass terrain for year-round testing of UTVs and bikes.</p>
+                <p style="text-align: left;"><strong>The Banker's Lounge:</strong> A glass-walled event space for private hosting and portfolio reviews.</p>
+            </div>
+
+            <div class="price-card" style="border-top: 4px solid var(--accent-teal);">
+                <span class="plan-name" style="color: var(--text-main); font-size: 1.5rem;">The Sanctuary</span>
+                <span style="display: block; font-weight: 600; color: var(--accent-teal); margin-bottom: 20px;">Lake Chelan, WA</span>
+                <p style="text-align: left; margin-bottom: 15px;"><strong>The Basecamp:</strong> A luxury lakefront estate serving as our expedition hub.</p>
+                <p style="text-align: left;"><strong>The Silent Safari:</strong> A 24-hour immersion program featuring Hwy 2 mountain expeditions and Stehekin "Hero Runs."</p>
+            </div>
+        </section>
+
+        <div class="vault-card" style="margin-top: 80px;">
+            <div>
+                <h3>The Vault Key</h3>
+                <p>Every Lofte Collection client receives a heavy-metal, QR-coded access card. This is your VIP pass to the Woodinville Flagship, our Power Oasis charging hubs, and your Digital Vault—where the 3D Gaussian Splats, service records, and battery health of your entire portfolio are securely stored.</p>
+            </div>
+            <div style="font-size: 4rem;">🗝️</div>
+        </div>
+
+        <section id="reserve" class="waitlist-section" style="background-color: var(--card-bg);">
+            <h2 style="color: var(--text-main);">Join the Waitlist</h2>
+            <p>Experience the future of transport brokerage. Coming 2028.</p>
+            
+            <div class="formaloo-container">
+                <div id="formz-wrapper" data-formz-slug="Wk8XuFCZ" data-formz-type="simple"></div>
+                <script src="https://formaloo.me/istatic/js/main.js"></script>
+            </div>
+            
+            <p class="small-print">Zero-party data. We do not track you.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Lofte LLC. All Rights Reserved.</p>
+            <p>Seattle, WA</p>
+            <p>
+                <a href="mailto:hello@lofte.online">hello@lofte.online</a> • 
+                <a href="canary.html">Warrant Canary</a> •
+                <a href="purpose.html">Our Purpose</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script data-goatcounter="https://lofte.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

@@ -110,9 +110,29 @@
         .vault-card h3 { color: var(--accent-teal); font-size: 2.2rem; margin-bottom: 15px; }
         .vault-card p { color: #CFD8DC; max-width: 500px; font-size: 1.1rem; line-height: 1.7; }
         
+        /* New Logo Container for Vault Key */
+        .vault-logo-container {
+            background-color: #FFFFFF;
+            padding: 25px;
+            border-radius: 50%; /* Circular emblem */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+            margin-left: 40px;
+        }
+        .vault-logo-container img {
+            width: 100%;
+            height: auto;
+        }
+        
         @media (max-width: 768px) {
             .vault-card { flex-direction: column; text-align: center; padding: 40px 20px; }
             .vault-card p { margin-bottom: 30px; }
+            .vault-logo-container { margin-left: 0; margin-bottom: 20px; width: 120px; height: 120px; padding: 20px;}
             .itinerary-step { padding: 40px 20px; }
             .step-label { left: 20px; }
             .collection-hero .headline { font-size: 3rem; }
@@ -137,9 +157,40 @@
         </header>
 
         <section class="editorial-block" style="margin-top: 40px;">
+            <h2>The Woodinville Flagship</h2>
+            <p>
+                Where the Chelan Sanctuary offers serenity, the Woodinville Studio offers raw, electric adrenaline. Far more than a gallery, this is an elite destination designed for unforgettable family and corporate experiences.
+            </p>
+            
+            <div class="itinerary-grid" style="margin-top: 40px;">
+                <div class="itinerary-step">
+                    <span class="step-label">The Sandbox</span>
+                    <h3>The Ultimate Electric Playground</h3>
+                    <p>There is nothing like this anywhere else in the Pacific Northwest. We have engineered a sprawling, hands-on proving ground for the world's best electric powersports. Test the limits on our dedicated e-bike and motorcycle tracks, or tackle the indoor dirt course with a high-performance e-dirt bike.</p>
+                    <p>For heavy-duty enthusiasts, we maintain active material pits, complete with piles of sand and gravel, to fully experience the torque of Monarch and Nesher electric tractors, ATVs, and UTVs. You can even test our premium electric property maintenance gear on our demonstration lawns.</p>
+                </div>
+
+                <div class="itinerary-step">
+                    <span class="step-label">The Expedition</span>
+                    <h3>Premium Electric RVs & Touring</h3>
+                    <p>As the premier destination for next-generation overlanding, we broker and showcase the world's most advanced towed and driven electric RVs. Whether you are seeking a self-sustaining luxury land yacht or a rugged, battery-backed towable, we provide an unmatched acquisition experience. We are actively developing a bespoke testing and delivery program specifically tailored for our electric touring clients.</p>
+                </div>
+
+                <div class="itinerary-step">
+                    <span class="step-label">The Brokerage</span>
+                    <h3>Immersive Concierge Service</h3>
+                    <p>Through the <strong>Lofte Auto Brokerage</strong>, we redefine the test drive. Whether you are acquiring a luxury EV or brokering a daily commuter through our 20+ partner brands, the service remains elite. We will chauffeur you to the dealer lots in our Cadillac Escalade IQ, or simply bring the vehicle directly to your driveway.</p>
+                    <p>Inside the studio, our technology pushes the boundaries of reality. Utilizing 3D Gaussian Splat scans and Apple Vision Pro headsets, we provide immersive, high-fidelity virtual tours of prospective vehicles before they ever arrive. A truly bespoke, white-glove acquisition experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="editorial-block">
             <h2>The Chelan Sanctuary</h2>
             <p>
-                We do not believe in test drives. We believe in immersion. For our most discerning clients—whether local residents or flying in from across the globe—Lofte Collection offers an exclusive, two-day retreat designed to showcase the absolute pinnacle of luxury electric marine travel.
+                We do not believe in test drives. We believe in immersion. For our most discerning clients (whether local residents or flying in from across the globe) Lofte Collection offers an exclusive, two-day retreat designed to showcase the absolute pinnacle of luxury electric marine travel.
             </p>
             <p style="font-style: italic; color: var(--accent-teal); font-weight: 600;">
                 Up to 5 guests. Fully catered. Pure silence.
@@ -164,43 +215,14 @@
             </div>
         </section>
 
-        <hr class="divider">
-
-        <section class="editorial-block">
-            <h2>The Woodinville Flagship</h2>
-            <p>
-                Where the Chelan Sanctuary offers serenity, the Woodinville Studio offers raw, electric adrenaline. Far more than a gallery, this is an elite destination designed for unforgettable family and corporate experiences.
-            </p>
-            
-            <div class="itinerary-grid" style="margin-top: 40px;">
-                <div class="itinerary-step">
-                    <span class="step-label">The Sandbox</span>
-                    <h3>The Ultimate Electric Playground</h3>
-                    <p>There is nothing like this anywhere else in the Pacific Northwest. We have engineered a sprawling, hands-on proving ground for the world's best electric powersports. Test the limits on our dedicated e-bike and motorcycle tracks, or tackle the indoor dirt course with a high-performance e-dirt bike.</p>
-                    <p>For heavy-duty enthusiasts, we maintain active material pits—complete with piles of sand and gravel—to fully experience the torque of Monarch and Nesher electric tractors, ATVs, and UTVs. You can even test our premium electric property maintenance gear on our demonstration lawns.</p>
-                </div>
-
-                <div class="itinerary-step">
-                    <span class="step-label">The Expedition</span>
-                    <h3>Premium Electric RVs & Touring</h3>
-                    <p>As the premier destination for next-generation overlanding, we broker and showcase the world's most advanced towed and driven electric RVs. Whether you are seeking a self-sustaining luxury land yacht or a rugged, battery-backed towable, we provide an unmatched acquisition experience. We are actively developing a bespoke testing and delivery program specifically tailored for our electric touring clients.</p>
-                </div>
-
-                <div class="itinerary-step">
-                    <span class="step-label">The Brokerage</span>
-                    <h3>Immersive Concierge Service</h3>
-                    <p>Through the <strong>Lofte Auto Brokerage</strong>, we redefine the test drive. Whether you are acquiring a luxury EV or brokering a daily commuter through our 20+ partner brands, the service remains elite. We will chauffeur you to the dealer lots in our Cadillac Escalade IQ, or simply bring the vehicle directly to your driveway.</p>
-                    <p>Inside the studio, our technology pushes the boundaries of reality. Utilizing 3D Gaussian Splat scans and Apple Vision Pro headsets, we provide immersive, high-fidelity virtual tours of prospective vehicles before they ever arrive. A truly bespoke, white-glove acquisition experience.</p>
-                </div>
-            </div>
-        </section>
-
         <div class="vault-card">
             <div>
                 <h3>The Vault Key</h3>
-                <p>To acquire a vehicle through Lofte is to join an exclusive ecosystem. Every client receives a heavy-metal, bespoke access card. This is your VIP pass to the Woodinville Studio, our private events, and your Digital Vault—where the immersive 3D scans, service history, and health metrics of your entire transport portfolio are seamlessly managed by our concierge team.</p>
+                <p>To acquire a vehicle through Lofte is to join an exclusive ecosystem. Every client receives a heavy-metal, bespoke access card. This is your VIP pass to the Woodinville Studio, our private events, and your Digital Vault, where the immersive 3D scans, service history, and health metrics of your entire transport portfolio are seamlessly managed by our concierge team.</p>
             </div>
-            <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🗝️</div>
+            <div class="vault-logo-container">
+                <img src="assets/images/collection-logo.png" alt="Lofte Collection Logo">
+            </div>
         </div>
 
         <section id="reserve" class="waitlist-section" style="background-color: var(--card-bg);">

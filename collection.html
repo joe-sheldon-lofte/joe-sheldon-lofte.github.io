@@ -3,52 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lofte Collection | The Ultimate Transport Portfolio</title>
+    <title>Lofte Collection | The Pinnacle of Electric Luxury</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* Swap out the standard colors for the Collection's Green & Bronze */
-            --text-main: #1B443C;      /* Forest Green */
-            --accent-teal: #A67C52;    /* Champagne Bronze */
-            --card-bg: #F4F6F5;        /* Very light mist green/gray */
-            --bg-color: #FCFCFC;       /* Gallery White */
+            /* The Collection's Forest Green & Champagne Bronze */
+            --text-main: #1B443C;      
+            --accent-teal: #A67C52;    
+            --card-bg: #F4F6F5;        
+            --bg-color: #FCFCFC;       
         }
 
         /* Dark, Moody Hero Section */
         .collection-hero {
             background-color: var(--text-main);
             color: white;
-            padding: 80px 20px 100px 20px;
+            padding: 100px 20px;
             border-radius: 12px;
             margin-top: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(27, 68, 60, 0.15);
+            background-image: linear-gradient(to bottom, rgba(27, 68, 60, 0.9), rgba(27, 68, 60, 1));
         }
-        .collection-hero .headline { color: white; }
-        .collection-hero .sub-headline { color: #E8EDE1; }
-        .collection-hero .gold-accent { color: var(--accent-teal); font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 20px; display: block; }
+        .collection-hero .headline { color: white; font-size: 4rem; letter-spacing: -0.02em; }
+        .collection-hero .sub-headline { color: #E8EDE1; font-size: 1.3rem; font-weight: 300; line-height: 1.8; }
+        .collection-hero .gold-accent { 
+            color: var(--accent-teal); 
+            font-weight: 800; 
+            letter-spacing: 0.1em; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+            margin-bottom: 30px; 
+            display: block; 
+        }
+
+        /* Editorial Narrative Blocks */
+        .editorial-block {
+            padding: 60px 0;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .editorial-block h2 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .editorial-block p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #4A5D58;
+            margin-bottom: 30px;
+        }
+
+        /* The Itinerary Grid */
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            text-align: left;
+        }
+        .itinerary-step {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            border-top: 4px solid var(--accent-teal);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            position: relative;
+        }
+        .step-label {
+            position: absolute;
+            top: -15px;
+            left: 50px;
+            background: var(--text-main);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+        .itinerary-step h3 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
 
         /* The Metal Key Card Style */
         .vault-card {
             background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
             color: white;
-            padding: 50px;
+            padding: 60px;
             border-radius: 16px;
             border-left: 4px solid var(--accent-teal);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 80px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 80px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-        .vault-card h3 { color: var(--accent-teal); font-size: 2rem; margin-bottom: 10px; }
-        .vault-card p { color: #CFD8DC; max-width: 500px; }
+        .vault-card h3 { color: var(--accent-teal); font-size: 2.2rem; margin-bottom: 15px; }
+        .vault-card p { color: #CFD8DC; max-width: 500px; font-size: 1.1rem; line-height: 1.7; }
         
         @media (max-width: 768px) {
-            .vault-card { flex-direction: column; text-align: center; }
-            .vault-card p { margin-bottom: 20px; }
+            .vault-card { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .vault-card p { margin-bottom: 30px; }
+            .itinerary-step { padding: 40px 20px; }
+            .step-label { left: 20px; }
+            .collection-hero .headline { font-size: 3rem; }
         }
     </style>
 </head>
@@ -63,77 +130,70 @@
 
         <header class="collection-hero">
             <span class="gold-accent">The Private Office Experience</span>
-            <h1 class="headline">ELEVATING EVERY<br>JOURNEY</h1>
-            <p class="sub-headline" style="max-width: 700px; margin: 0 auto;">
-                Whether you are commissioning a $500,000 electric hydrofoil or brokering a daily commuter, Lofte Collection delivers the exact same world-class, white-glove reverence. We don't just sell vehicles; we manage your lifetime transport portfolio.
+            <h1 class="headline">SILENCE & EXCESS</h1>
+            <p class="sub-headline" style="max-width: 750px; margin: 0 auto;">
+                Welcome to the only place in the world where you can commission a world-class electric hydrofoil through a fully immersive, two-day private sanctuary experience on Washington's renowned Lake Chelan.
             </p>
         </header>
 
+        <section class="editorial-block" style="margin-top: 40px;">
+            <h2>The Chelan Sanctuary</h2>
+            <p>
+                We do not believe in test drives. We believe in immersion. For our most discerning clients—whether local residents or flying in from across the globe—Lofte Collection offers an exclusive, two-day retreat designed to showcase the absolute pinnacle of luxury electric marine travel.
+            </p>
+            <p style="font-style: italic; color: var(--accent-teal); font-weight: 600;">
+                Up to 5 guests. Fully catered. Pure silence.
+            </p>
+
+            <div class="itinerary-grid">
+                
+                <div class="itinerary-step">
+                    <span class="step-label">Day One</span>
+                    <h3>The Ascent</h3>
+                    <p>Your journey begins at our Woodinville Flagship Gallery. Leave your luggage to us as you and up to four guests step into a Lofte-commissioned Cadillac Escalade IQ. Accompanied by our Marine Director, you will enjoy a silent, chauffeured road trip over the breathtaking Cascade Mountains, arriving at our private, lakefront lodge in Manson, Washington.</p>
+                    <p>The afternoon is yours to command. Step off our private dock and experience the breathtaking sensation of flying over the water in a silent, hydrofoiling Candela. As the sun sets over Lake Chelan, return to the lodge where a private chef has prepared a bespoke, multi-course dinner paired with Washington's finest curated wines.</p>
+                </div>
+
+                <div class="itinerary-step">
+                    <span class="step-label">Day Two</span>
+                    <h3>The Return</h3>
+                    <p>Wake up to the pristine quiet of the lake. Following a gourmet, chef-prepared breakfast, take one last morning cruise or simply relax on the terrace. By mid-morning, your Escalade IQ awaits.</p>
+                    <p>The journey back to reality includes a curated, high-end lunch stop nestled in the mountains before your chauffeur returns you seamlessly to the Woodinville Flagship or your private aviation terminal.</p>
+                </div>
+
+            </div>
+        </section>
+
         <hr class="divider">
 
-        <div style="text-align: center;">
-            <span class="section-title">The Master Portfolio</span>
-        </div>
-
-        <section class="tech-grid">
-            <div class="tech-item">
-                <h4 style="color: var(--accent-teal);">Road</h4>
-                <p><strong>The Auto Brokerage:</strong> From ultra-luxury EVs to your favorite mass-market brands. Test drive in a chauffeured Escalade IQ. Take delivery via our nationwide "Intercept" white-glove prep service.</p>
-            </div>
-            <div class="tech-item">
-                <h4 style="color: var(--accent-teal);">Water</h4>
-                <p><strong>Lofte Marine:</strong> The premiere PNW hub for Candela and X Shore electric vessels. We handle everything from slip leasing to winterization and battery Deep Sleep management.</p>
-            </div>
-            <div class="tech-item">
-                <h4 style="color: var(--accent-teal);">Land</h4>
-                <p><strong>Powersports & Estate:</strong> Essential equipment for the modern estate. Featuring Stark Varg electric motorcycles, Polaris Ranger Kinetics, and Monarch autonomous tractors.</p>
-            </div>
-            <div class="tech-item">
-                <h4 style="color: var(--accent-teal);">Energy</h4>
-                <p><strong>Power Oasis:</strong> Battery-backed charging hubs providing high-speed top-ups, emergency resilience, and Starlink connectivity for remote communities.</p>
-            </div>
+        <section class="editorial-block">
+            <h2>The Woodinville Flagship</h2>
+            <p>
+                For those seeking bespoke ground transport, our Woodinville Flagship is your private gallery. Built with the reverence of a high-end horology lounge, it is a space to sip champagne and commission your next vehicle. 
+            </p>
+            <p>
+                Through the <strong>Lofte Auto Brokerage</strong>, we act as your personal transport concierge. Whether you are adding a Stark Varg electric motorcycle to your estate, acquiring a Polaris Ranger Kinetic for the property, or simply brokering a daily commuter from one of our 20+ partner brands, every acquisition is handled with the exact same white-glove "Private Office" care.
+            </p>
         </section>
 
-        <div style="text-align: center; margin-top: 80px;">
-            <span class="section-title">The Physical Infrastructure</span>
-            <p style="margin-bottom: 40px;">Where the digital experience meets the physical world.</p>
-        </div>
-
-        <section class="pricing-grid" style="justify-content: center;">
-            <div class="price-card" style="border-top: 4px solid var(--text-main);">
-                <span class="plan-name" style="color: var(--text-main); font-size: 1.5rem;">The Flagship</span>
-                <span style="display: block; font-weight: 600; color: var(--accent-teal); margin-bottom: 20px;">Woodinville, WA</span>
-                <p style="text-align: left; margin-bottom: 15px;"><strong>The Gallery:</strong> A vintage-modern showroom featuring the pinnacle of electric transport.</p>
-                <p style="text-align: left; margin-bottom: 15px;"><strong>The Sandbox:</strong> 40,000 sq. ft. of indoor dirt, gravel, and grass terrain for year-round testing of UTVs and bikes.</p>
-                <p style="text-align: left;"><strong>The Banker's Lounge:</strong> A glass-walled event space for private hosting and portfolio reviews.</p>
-            </div>
-
-            <div class="price-card" style="border-top: 4px solid var(--accent-teal);">
-                <span class="plan-name" style="color: var(--text-main); font-size: 1.5rem;">The Sanctuary</span>
-                <span style="display: block; font-weight: 600; color: var(--accent-teal); margin-bottom: 20px;">Lake Chelan, WA</span>
-                <p style="text-align: left; margin-bottom: 15px;"><strong>The Basecamp:</strong> A luxury lakefront estate serving as our expedition hub.</p>
-                <p style="text-align: left;"><strong>The Silent Safari:</strong> A 24-hour immersion program featuring Hwy 2 mountain expeditions and Stehekin "Hero Runs."</p>
-            </div>
-        </section>
-
-        <div class="vault-card" style="margin-top: 80px;">
+        <div class="vault-card">
             <div>
                 <h3>The Vault Key</h3>
-                <p>Every Lofte Collection client receives a heavy-metal, QR-coded access card. This is your VIP pass to the Woodinville Flagship, our Power Oasis charging hubs, and your Digital Vault—where the 3D Gaussian Splats, service records, and battery health of your entire portfolio are securely stored.</p>
+                <p>To acquire a vehicle through Lofte is to join an exclusive ecosystem. Every client receives a heavy-metal, bespoke access card. This is your VIP pass to the Banker's Lounge, our exclusive events, and your Digital Vault—where the 3D scans, service history, and health metrics of your entire transport portfolio are seamlessly managed by our concierge team.</p>
             </div>
-            <div style="font-size: 4rem;">🗝️</div>
+            <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🗝️</div>
         </div>
 
         <section id="reserve" class="waitlist-section" style="background-color: var(--card-bg);">
-            <h2 style="color: var(--text-main);">Join the Waitlist</h2>
-            <p>Experience the future of transport brokerage. Coming 2028.</p>
+            <h2 style="color: var(--text-main);">Request an Invitation</h2>
+            <p>The Chelan Sanctuary and Woodinville Flagship open in 2028. Priority is granted to early registrants.</p>
             
             <div class="formaloo-container">
                 <div id="formz-wrapper" data-formz-slug="Wk8XuFCZ" data-formz-type="simple"></div>
                 <script src="https://formaloo.me/istatic/js/main.js"></script>
             </div>
             
-            <p class="small-print">Zero-party data. We do not track you.</p>
+            <p class="small-print">We respect zero-party data. Your details are secured in our vault.</p>
         </section>
 
         <footer>

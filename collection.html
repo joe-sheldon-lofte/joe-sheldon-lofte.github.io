@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
+        /* Enable elegant smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
         :root {
             /* The Collection's Forest Green & Champagne Bronze */
             --text-main: #1B443C;      
@@ -37,6 +42,28 @@
             font-size: 0.9rem; 
             margin-bottom: 30px; 
             display: block; 
+        }
+
+        /* Hero Clickable Link Styles */
+        .hero-scroll-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            max-width: 750px;
+            margin: 0 auto;
+            transition: opacity 0.3s ease;
+        }
+        .hero-scroll-link:hover {
+            opacity: 0.8;
+        }
+        .hero-prompt {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--accent-teal);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         /* Editorial Narrative Blocks */
@@ -151,9 +178,13 @@
         <header class="collection-hero">
             <span class="gold-accent">The Private Office Experience</span>
             <h1 class="headline">SILENCE & EXCESS</h1>
-            <p class="sub-headline" style="max-width: 750px; margin: 0 auto;">
-                Welcome to the only place in the world where you can commission a world-class electric hydrofoil through a fully immersive, two-day private sanctuary experience on Washington's renowned Lake Chelan.
-            </p>
+            
+            <a href="#chelan" class="hero-scroll-link">
+                <p class="sub-headline">
+                    Welcome to the only place in the world where you can commission a world-class electric hydrofoil through a fully immersive, two-day private sanctuary experience on Washington's renowned Lake Chelan.
+                    <span class="hero-prompt">Explore the Experience ↓</span>
+                </p>
+            </a>
         </header>
 
         <section class="editorial-block" style="margin-top: 40px;">
@@ -187,10 +218,10 @@
 
         <hr class="divider">
 
-        <section class="editorial-block">
+        <section id="chelan" class="editorial-block">
             <h2>The Chelan Sanctuary</h2>
             <p>
-                We do not believe in test drives. We believe in immersion. For our most discerning clients (whether local residents or flying in from across the globe) Lofte Collection offers an exclusive, two-day retreat designed to showcase the absolute pinnacle of luxury electric marine travel.
+                We do not believe in test drives. We believe in immersion. For our most discerning clients, Lofte Collection offers an exclusive, two-day retreat designed to showcase the absolute pinnacle of luxury electric marine travel.
             </p>
             <p style="font-style: italic; color: var(--accent-teal); font-weight: 600;">
                 Up to 5 guests. Fully catered. Pure silence.

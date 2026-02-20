@@ -21,23 +21,24 @@
             --bg-color: #FCFCFC;       
         }
 
+        /* Large Main Logo (Above Hero) */
+        .hero-logo-large {
+            width: 220px;
+            max-width: 80vw;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.08)); /* Subtle luxury shadow */
+        }
+
         /* Dark, Moody Hero Section */
         .collection-hero {
             background-color: var(--text-main);
             color: white;
             padding: 80px 20px 100px 20px;
             border-radius: 12px;
-            margin-top: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(27, 68, 60, 0.15);
             background-image: linear-gradient(to bottom, rgba(27, 68, 60, 0.9), rgba(27, 68, 60, 1));
-        }
-        /* New Large Hero Logo Style */
-        .hero-logo-large {
-            width: 180px;
-            height: auto;
-            margin-bottom: 40px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); /* Adds depth */
         }
         .collection-hero .headline { color: white; font-size: 4rem; letter-spacing: -0.02em; }
         .collection-hero .sub-headline { color: #E8EDE1; font-size: 1.3rem; font-weight: 300; line-height: 1.8; }
@@ -145,7 +146,7 @@
         .vault-card p { color: #CFD8DC; max-width: 500px; font-size: 1.1rem; line-height: 1.7; }
         
         @media (max-width: 768px) {
-            .hero-logo-large { width: 140px; margin-bottom: 30px; }
+            .hero-logo-large { width: 160px; }
             .vault-card { flex-direction: column; text-align: center; padding: 40px 20px; }
             .vault-card p { margin-bottom: 30px; }
             .itinerary-step { padding: 40px 20px; }
@@ -158,13 +159,15 @@
 
     <div class="container">
 
-        <nav class="nav-header">
+        <nav class="nav-header" style="margin-bottom: 30px;">
             <a href="index.html" class="back-link">← Return to Lofte</a>
-            </nav>
+        </nav>
+
+        <div style="text-align: center;">
+            <img src="assets/images/collection-logo.png" alt="Lofte Collection Logo" class="hero-logo-large">
+        </div>
 
         <header class="collection-hero">
-            <img src="assets/images/collection-logo.png" alt="Lofte Collection Logo" class="hero-logo-large">
-            
             <span class="gold-accent">The Private Office Experience</span>
             <h1 class="headline">SILENCE & EXCESS</h1>
             

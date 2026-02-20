@@ -25,12 +25,19 @@
         .collection-hero {
             background-color: var(--text-main);
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px 100px 20px;
             border-radius: 12px;
             margin-top: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(27, 68, 60, 0.15);
             background-image: linear-gradient(to bottom, rgba(27, 68, 60, 0.9), rgba(27, 68, 60, 1));
+        }
+        /* New Large Hero Logo Style */
+        .hero-logo-large {
+            width: 180px;
+            height: auto;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); /* Adds depth */
         }
         .collection-hero .headline { color: white; font-size: 4rem; letter-spacing: -0.02em; }
         .collection-hero .sub-headline { color: #E8EDE1; font-size: 1.3rem; font-weight: 300; line-height: 1.8; }
@@ -137,29 +144,10 @@
         .vault-card h3 { color: var(--accent-teal); font-size: 2.2rem; margin-bottom: 15px; }
         .vault-card p { color: #CFD8DC; max-width: 500px; font-size: 1.1rem; line-height: 1.7; }
         
-        /* New Logo Container for Vault Key */
-        .vault-logo-container {
-            background-color: #FFFFFF;
-            padding: 25px;
-            border-radius: 50%; /* Circular emblem */
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 140px;
-            height: 140px;
-            flex-shrink: 0;
-            margin-left: 40px;
-        }
-        .vault-logo-container img {
-            width: 100%;
-            height: auto;
-        }
-        
         @media (max-width: 768px) {
+            .hero-logo-large { width: 140px; margin-bottom: 30px; }
             .vault-card { flex-direction: column; text-align: center; padding: 40px 20px; }
             .vault-card p { margin-bottom: 30px; }
-            .vault-logo-container { margin-left: 0; margin-bottom: 20px; width: 120px; height: 120px; padding: 20px;}
             .itinerary-step { padding: 40px 20px; }
             .step-label { left: 20px; }
             .collection-hero .headline { font-size: 3rem; }
@@ -172,10 +160,11 @@
 
         <nav class="nav-header">
             <a href="index.html" class="back-link">← Return to Lofte</a>
-            <img src="assets/images/collection-logo.png" alt="Lofte Collection" style="height: 40px;">
-        </nav>
+            </nav>
 
         <header class="collection-hero">
+            <img src="assets/images/collection-logo.png" alt="Lofte Collection Logo" class="hero-logo-large">
+            
             <span class="gold-accent">The Private Office Experience</span>
             <h1 class="headline">SILENCE & EXCESS</h1>
             
@@ -251,9 +240,7 @@
                 <h3>The Vault Key</h3>
                 <p>To acquire a vehicle through Lofte is to join an exclusive ecosystem. Every client receives a heavy-metal, bespoke access card. This is your VIP pass to the Woodinville Studio, our private events, and your Digital Vault, where the immersive 3D scans, service history, and health metrics of your entire transport portfolio are seamlessly managed by our concierge team.</p>
             </div>
-            <div class="vault-logo-container">
-                <img src="assets/images/collection-logo.png" alt="Lofte Collection Logo">
-            </div>
+            <div style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">🗝️</div>
         </div>
 
         <section id="reserve" class="waitlist-section" style="background-color: var(--card-bg);">

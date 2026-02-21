@@ -6,6 +6,39 @@
     <title>Lofte Eco | A Quieter Neighborhood</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Eco-specific accents */
+        .eco-card {
+            border-top: 4px solid var(--accent-teal);
+            text-align: left;
+        }
+        .eco-card h3 {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .eco-subtitle {
+            display: block;
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+        .eco-highlight {
+            background: var(--text-main);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,39 +50,108 @@
         </nav>
 
         <header class="hero-section">
-            <h1 class="headline">THE QUIET<br>REVOLUTION</h1>
+            <h1 class="headline">FROM EXTRACTION<br>TO EMPOWERMENT</h1>
             
             <p style="font-weight: 800; color: var(--accent-teal); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">
-                In Development for 2028
+                Exclusive to King, Snohomish, and Pierce Counties
             </p>
 
-            <p class="sub-headline" style="max-width: 700px;">
-                Say goodbye to the roar of gas-powered mowers and the smell of two-stroke exhaust. Lofte Eco is building a new standard for neighborhood care, bringing silent, zero-emission property maintenance and community utility services directly to your door.
+            <p class="sub-headline" style="max-width: 800px;">
+                For too long, local commerce has been extractive. National conglomerates take up to 50% of every dollar spent in our neighborhoods and ship it far away, leaving behind noisy streets, congested air, and a thinning community. Lofte Eco is the physical internet for the Pacific Northwest. We are a circular, all-electric logistics and service loop designed to keep value exactly where it belongs: in your neighborhood.
             </p>
         </header>
 
         <hr class="divider">
 
         <section class="editorial-block" style="text-align: center; margin-bottom: 80px;">
-            <span class="section-title">A Cleaner Standard</span>
+            <span class="section-title">The Silent Backbone</span>
             <p style="max-width: 700px; margin: 0 auto 30px auto;">
-                We are actively engineering a fleet of 100% electric, high-performance maintenance tools and vehicles. Our goal is simple: to keep your property pristine without disrupting the peace and quiet of your sanctuary.
+                The foundation of Lofte Eco is our specialized fleet of <strong>Chevrolet Silverado EV WT trucks</strong>. Utilizing custom-built accessories and trailers, this 100% electric fleet accomplishes over 95% of our heavy lifting. 
             </p>
-            <p style="max-width: 700px; margin: 0 auto; color: var(--accent-teal); font-weight: 600;">
-                Full division details and service areas will be announced soon.
+            <p style="max-width: 700px; margin: 0 auto;">
+                By leveraging "Pro Power Onboard" technology, our trucks act as mobile power stations. We run high-draw compressors, impact tools, and professional chainsaws directly from the truck battery. No gas generators. No diesel idling. Just silent, high-output performance that proves profit and purpose are the exact same thing.
             </p>
         </section>
 
-        <section id="reserve" class="waitlist-section">
-            <h2>Join the Sanctuary</h2>
-            <p>Be the first to know when Lofte Eco launches in your neighborhood.</p>
+        <div style="text-align: center; margin-top: 80px;">
+            <span class="section-title">The Five Pillars of Eco</span>
+            <p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Consolidating the chaos of property management and emergency services into one seamless, silent ecosystem.</p>
+        </div>
+
+        <section class="divisions-grid">
+            
+            <div class="card eco-card">
+                <span class="eco-highlight">The Silent Rescue</span>
+                <h3>Motion Works</h3>
+                <span class="eco-subtitle">Mobile Mobility & Rescue</span>
+                <p>Transportation maintenance shouldn't require a trip to a noisy, inconvenient shop. We offer 24/7 emergency roadside assistance for both automobiles and bicycles, including specialized e-bike rescue and battery swaps. We provide professional diagnostics and repair directly in your driveway using silent electric tools.</p>
+                <ul class="features-list">
+                    <li>At-home seasonal tire swaps and off-season storage</li>
+                    <li>Water-reclaiming, high-end mobile auto detailing</li>
+                    <li>Bicycle and commuter-first rescue protocols</li>
+                </ul>
+            </div>
+
+            <div class="card eco-card">
+                <span class="eco-highlight">Clean In, Clean Out</span>
+                <h3>Site Works</h3>
+                <span class="eco-subtitle">Property Restoration & Management</span>
+                <p>Managing a property usually means dealing with five different contractors and five different diesel trucks. We consolidate the heavy lifting. We perform high-tech health checks using sewer scopes and thermal imaging to catch crises before they happen.</p>
+                <ul class="features-list">
+                    <li>Junk deconstruction focused on upcycling, not landfills</li>
+                    <li>Skilled general contracting for home improvements</li>
+                    <li>White-glove cleaning using non-toxic, safe agents</li>
+                </ul>
+            </div>
+
+            <div class="card eco-card">
+                <span class="eco-highlight">Mow at Sunrise</span>
+                <h3>Earth Works</h3>
+                <span class="eco-subtitle">Land, Arbor & Ecological Health</span>
+                <p>A thriving neighborhood shouldn't sound like a two-stroke engine at 6 AM. We perform elite landscape and land management without the noise or the carbon footprint. Using 100% electric equipment, we can mow your lawn at sunrise without waking a single neighbor.</p>
+                <ul class="features-list">
+                    <li>Silent tree care using battery-powered chainsaws</li>
+                    <li>Emergency water control and drainage engineering</li>
+                    <li>Drone eco-inspections to prove your land's sustainability</li>
+                </ul>
+            </div>
+
+            <div class="card eco-card">
+                <span class="eco-highlight">Trash to Treasure</span>
+                <h3>Recovery Works</h3>
+                <span class="eco-subtitle">The Circular Economy Hub</span>
+                <p>We do not have a waste problem; we have a logistics problem. Recovery Works is a hyper-local facility that diverts waste and turns it into premium goods. Through our secure metal porch boxes (the Lofte Vault), our "Milkman 2.0" service picks up your food waste and returns it as rich soil.</p>
+                <ul class="features-list">
+                    <li>Retail sales of reclaimed kiln-dried firewood</li>
+                    <li>Premium upcycled garden mulch, soil, and sand</li>
+                    <li>Clean, dust-free equestrian bedding</li>
+                </ul>
+            </div>
+
+            <div class="card eco-card">
+                <span class="eco-highlight">Your Power, Uninterrupted</span>
+                <h3>Grid Works</h3>
+                <span class="eco-subtitle">Infrastructure & Emergency Response</span>
+                <p>When the power goes out or a crisis hits, the community needs an always-on partner. Our Silverado EV fleet is essentially a distributed power grid. In a disaster, our trucks can back-feed power into a home or medical clinic using Vehicle-to-Home (V2H) technology.</p>
+                <ul class="features-list">
+                    <li>Silent, solar-augmented security and gate trailers</li>
+                    <li>Massive power aggregation trailers for blackouts</li>
+                    <li>Drone reconnaissance and flood rescue support</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="reserve" class="waitlist-section" style="margin-top: 80px;">
+            <h2>Invest in the Loop</h2>
+            <p>Lofte Eco is actively in development. Join the waitlist to secure priority service in your neighborhood.</p>
             
             <div class="formaloo-container">
                 <div id="formz-wrapper" data-formz-slug="Wk8XuFCZ" data-formz-type="simple"></div>
                 <script src="https://formaloo.me/istatic/js/main.js"></script>
             </div>
             
-            <p class="small-print">We respect zero-party data. Your email never leaves our vault.</p>
+            <p class="small-print">Zero-party data. We do not track you.</p>
         </section>
 
         <footer>

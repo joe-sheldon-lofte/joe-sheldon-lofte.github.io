@@ -409,3 +409,21 @@ footer a:hover { color: var(--accent-teal); }
     .roadmap-desc { margin: 0; }
     .card-icon { width: 100%; height: auto; aspect-ratio: 1/1; }
 }
+/* --- ANNOUNCEMENT BANNER --- */
+.announcement-banner {
+    background-color: var(--accent-teal);
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.announcement-banner:hover {
+    background-color: var(--text-main);
+}
+

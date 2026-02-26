@@ -9,22 +9,35 @@
     <style>
         /* Special Style for the Bottom Love Card */
         .love-feature-card {
-            background-color: white;
+            background-color: #263238; /* Dark Charcoal to separate from grid */
             border-radius: 12px;
-            padding: 40px;
-            margin-top: 40px;
+            padding: 50px 20px;
+            margin-top: 60px; /* More spacing from the grid */
             text-align: center;
-            border: 1px solid #ECEFF1;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             text-decoration: none;
             display: block;
-            color: inherit;
-            border-bottom: 4px solid #4DB6AC; /* Mint Accent */
+            color: white;
+            border-top: 4px solid #4DB6AC; /* Mint Accent */
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .love-feature-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(77, 182, 172, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            background-color: #1F292E; /* Slightly darker on hover */
+        }
+        
+        /* White circle to make the logo pop against the dark background */
+        .love-logo-container {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -130,12 +143,12 @@
         </section>
 
         <a href="love.html" class="love-feature-card">
-            <div class="card-icon">
-                <img src="assets/images/love-logo.png" alt="Lofte Love" style="height: 60px; margin-bottom: 10px;">
+            <div class="love-logo-container">
+                <img src="assets/images/love-logo.png" alt="Lofte Love" style="height: 60px; width: auto;">
             </div>
-            <h3>Lofte Love</h3>
-            <p style="color: #546E7A; max-width: 500px; margin: 0 auto;">
-                The heart of our ecosystem. Reinvesting 50% of profits back into the forests, bookstores, and creators that make our neighborhoods worth living in.
+            <h3 style="color: white; font-size: 2rem; margin-bottom: 15px;">Lofte Love</h3>
+            <p style="color: #ECEFF1; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                The heart of our ecosystem. We reinvest 50% of profits back into the forests, bookstores, and creators that make our neighborhoods worth living in.
             </p>
         </a>
 

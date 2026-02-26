@@ -6,6 +6,27 @@
     <title>Lofte | Empowering Communities</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Special Style for the Bottom Love Card */
+        .love-feature-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid #ECEFF1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            border-bottom: 4px solid #4DB6AC; /* Mint Accent */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .love-feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(77, 182, 172, 0.15);
+        }
+    </style>
 </head>
 <body>
 
@@ -107,6 +128,16 @@
             </a>
 
         </section>
+
+        <a href="love.html" class="love-feature-card">
+            <div class="card-icon">
+                <img src="assets/images/love-logo.png" alt="Lofte Love" style="height: 60px; margin-bottom: 10px;">
+            </div>
+            <h3>Lofte Love</h3>
+            <p style="color: #546E7A; max-width: 500px; margin: 0 auto;">
+                The heart of our ecosystem. Reinvesting 50% of profits back into the forests, bookstores, and creators that make our neighborhoods worth living in.
+            </p>
+        </a>
 
         <section id="waitlist" class="waitlist-section">
             <h2>Join the Sanctuary</h2>

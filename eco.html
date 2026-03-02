@@ -11,6 +11,11 @@
         .eco-card {
             border-top: 4px solid var(--accent-teal);
             text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .eco-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
         .eco-card h3 {
             color: var(--text-main);
@@ -37,6 +42,12 @@
             margin-bottom: 20px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
+        }
+        /* Removes link styling from the cards */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
     </style>
 </head>
@@ -75,70 +86,80 @@
 
         <div style="text-align: center; margin-top: 80px;">
             <span class="section-title">The Five Pillars of Eco</span>
-            <p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Consolidating the chaos of property management and emergency services into one seamless, silent ecosystem.</p>
+            <p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Consolidating the chaos of property management and emergency services into one seamless, silent ecosystem. Click any division to explore.</p>
         </div>
 
         <section class="divisions-grid">
             
-            <div class="card eco-card">
-                <span class="eco-highlight">The Silent Rescue</span>
-                <h3>Motion Works</h3>
-                <span class="eco-subtitle">Mobile Mobility & Rescue</span>
-                <p>Transportation maintenance shouldn't require a trip to a noisy, inconvenient shop. We offer 24/7 emergency roadside assistance for both automobiles and bicycles, including specialized e-bike rescue and battery swaps. We provide professional diagnostics and repair directly in your driveway using silent electric tools.</p>
-                <ul class="features-list">
-                    <li>At-home seasonal tire swaps and off-season storage</li>
-                    <li>Water-reclaiming, high-end mobile auto detailing</li>
-                    <li>Bicycle and commuter-first rescue protocols</li>
-                </ul>
-            </div>
+            <a href="eco-motion.html" class="card-link">
+                <div class="card eco-card">
+                    <span class="eco-highlight">The Silent Rescue</span>
+                    <h3>Motion Works</h3>
+                    <span class="eco-subtitle">Mobile Mobility & Rescue</span>
+                    <p>Transportation maintenance shouldn't require a trip to a noisy, inconvenient shop. We offer 24/7 emergency roadside assistance for both automobiles and bicycles, including specialized e-bike rescue and battery swaps.</p>
+                    <ul class="features-list">
+                        <li>At-home seasonal tire swaps and off-season storage</li>
+                        <li>Water-reclaiming, high-end mobile auto detailing</li>
+                        <li>Bicycle and commuter-first rescue protocols</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card eco-card">
-                <span class="eco-highlight">Clean In, Clean Out</span>
-                <h3>Site Works</h3>
-                <span class="eco-subtitle">Property Restoration & Management</span>
-                <p>Managing a property usually means dealing with five different contractors and five different diesel trucks. We consolidate the heavy lifting. We perform high-tech health checks using sewer scopes and thermal imaging to catch crises before they happen.</p>
-                <ul class="features-list">
-                    <li>Junk deconstruction focused on upcycling, not landfills</li>
-                    <li>Skilled general contracting for home improvements</li>
-                    <li>White-glove cleaning using non-toxic, safe agents</li>
-                </ul>
-            </div>
+            <a href="eco-site.html" class="card-link">
+                <div class="card eco-card">
+                    <span class="eco-highlight">Clean In, Clean Out</span>
+                    <h3>Site Works</h3>
+                    <span class="eco-subtitle">Property Restoration & Management</span>
+                    <p>Managing a property usually means dealing with five different contractors and five different diesel trucks. We consolidate the heavy lifting. We perform high-tech health checks using sewer scopes and thermal imaging to catch crises before they happen.</p>
+                    <ul class="features-list">
+                        <li>Junk deconstruction focused on upcycling, not landfills</li>
+                        <li>Skilled general contracting for home improvements</li>
+                        <li>White-glove cleaning using non-toxic, safe agents</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card eco-card">
-                <span class="eco-highlight">Mow at Sunrise</span>
-                <h3>Earth Works</h3>
-                <span class="eco-subtitle">Land, Arbor & Ecological Health</span>
-                <p>A thriving neighborhood shouldn't sound like a two-stroke engine at 6 AM. We perform elite landscape and land management without the noise or the carbon footprint. Using 100% electric equipment, we can mow your lawn at sunrise without waking a single neighbor.</p>
-                <ul class="features-list">
-                    <li>Silent tree care using battery-powered chainsaws</li>
-                    <li>Emergency water control and drainage engineering</li>
-                    <li>Drone eco-inspections to prove your land's sustainability</li>
-                </ul>
-            </div>
+            <a href="eco-earth.html" class="card-link">
+                <div class="card eco-card">
+                    <span class="eco-highlight">Mow at Sunrise</span>
+                    <h3>Earth Works</h3>
+                    <span class="eco-subtitle">Land, Arbor & Ecological Health</span>
+                    <p>A thriving neighborhood shouldn't sound like a two-stroke engine at 6 AM. We perform elite landscape and land management without the noise or the carbon footprint. Using 100% electric equipment, we can mow your lawn at sunrise without waking a single neighbor.</p>
+                    <ul class="features-list">
+                        <li>Silent tree care using battery-powered chainsaws</li>
+                        <li>Emergency water control and drainage engineering</li>
+                        <li>Drone eco-inspections to prove your land's sustainability</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card eco-card">
-                <span class="eco-highlight">Trash to Treasure</span>
-                <h3>Recovery Works</h3>
-                <span class="eco-subtitle">The Circular Economy Hub</span>
-                <p>We do not have a waste problem; we have a logistics problem. Recovery Works is a hyper-local facility that diverts waste and turns it into premium goods. Through our secure metal porch boxes (the Lofte Vault), our "Milkman 2.0" service picks up your food waste and returns it as rich soil.</p>
-                <ul class="features-list">
-                    <li>Retail sales of reclaimed kiln-dried firewood</li>
-                    <li>Premium upcycled garden mulch, soil, and sand</li>
-                    <li>Clean, dust-free equestrian bedding</li>
-                </ul>
-            </div>
+            <a href="eco-recovery.html" class="card-link">
+                <div class="card eco-card">
+                    <span class="eco-highlight">Trash to Treasure</span>
+                    <h3>Recovery Works</h3>
+                    <span class="eco-subtitle">The Circular Economy Hub</span>
+                    <p>We do not have a waste problem; we have a logistics problem. Recovery Works is a hyper-local facility that diverts waste and turns it into premium goods. Through our secure metal porch boxes (the Lofte Vault), our "Milkman 2.0" service picks up your food waste and returns it as rich soil.</p>
+                    <ul class="features-list">
+                        <li>Retail sales of reclaimed kiln-dried firewood</li>
+                        <li>Premium upcycled garden mulch, soil, and sand</li>
+                        <li>Clean, dust-free equestrian bedding</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card eco-card">
-                <span class="eco-highlight">Your Power, Uninterrupted</span>
-                <h3>Grid Works</h3>
-                <span class="eco-subtitle">Infrastructure & Emergency Response</span>
-                <p>When the power goes out or a crisis hits, the community needs an always-on partner. Our Silverado EV fleet is essentially a distributed power grid. In a disaster, our trucks can back-feed power into a home or medical clinic using Vehicle-to-Home (V2H) technology.</p>
-                <ul class="features-list">
-                    <li>Silent, solar-augmented security and gate trailers</li>
-                    <li>Massive power aggregation trailers for blackouts</li>
-                    <li>Drone reconnaissance and flood rescue support</li>
-                </ul>
-            </div>
+            <a href="eco-grid.html" class="card-link">
+                <div class="card eco-card">
+                    <span class="eco-highlight">Your Power, Uninterrupted</span>
+                    <h3>Grid Works</h3>
+                    <span class="eco-subtitle">Infrastructure & Emergency Response</span>
+                    <p>When the power goes out or a crisis hits, the community needs an always-on partner. Our Silverado EV fleet is essentially a distributed power grid. In a disaster, our trucks can back-feed power into a home or medical clinic using Vehicle-to-Home technology.</p>
+                    <ul class="features-list">
+                        <li>Silent, solar-augmented security and gate trailers</li>
+                        <li>Massive power aggregation trailers for blackouts</li>
+                        <li>Drone reconnaissance and flood rescue support</li>
+                    </ul>
+                </div>
+            </a>
 
         </section>
 
@@ -160,7 +181,8 @@
             <p>
                 <a href="mailto:hello@lofte.online">hello@lofte.online</a> • 
                 <a href="canary.html">Warrant Canary</a> •
-                <a href="purpose.html">Our Purpose</a>
+                <a href="love.html">Lofte Love</a> •
+                <a href="invest.html">Invest</a>
             </p>
         </footer>
 

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofte Creators | Own Your Audience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .creator-hero {
+            background-color: var(--text-main);
+            color: white;
+            padding: 100px 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .creator-hero .headline { color: white; letter-spacing: -0.03em; }
+        .creator-hero .sub-headline { color: #ECEFF1; font-weight: 300; }
+        .creator-accent { 
+            color: var(--accent-teal); 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+            margin-bottom: 10px; 
+            display: block; 
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .path-column {
+            background: var(--card-bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-teal);
+        }
+        .path-column h3 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .path-item {
+            margin-bottom: 15px;
+        }
+        .path-item strong {
+            display: block;
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        .path-item span {
+            color: #546E7A;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            display: block;
+        }
+
+        .pledge-box {
+            background-color: #F8FBFA;
+            border: 1px solid var(--accent-teal);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .pledge-box h4 {
+            color: var(--accent-teal);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="nav-header">
+            <a href="media.html" class="back-link">← Return to Lofte Media</a>
+            <img src="assets/images/media-logo.png" alt="Lofte Media" style="height: 40px;">
+        </nav>
+
+        <header class="creator-hero">
+            <span class="creator-accent">Join the Sovereign Sanctuary</span>
+            <h1 class="headline">STOP BEING<br>THE PRODUCT</h1>
+            <p class="sub-headline" style="max-width: 800px; margin: 0 auto;">
+                The era of "Platform Capture" is over. At Lofte, we have removed the corporate filters, the rage-bait algorithms, and the data harvesters. We provide a high-definition home for video, audio, and digital print that is decoupled from corporate surveillance. Here, you own your audience, you own your data, and you own the destiny of your content forever.
+            </p>
+        </header>
+
+        <hr class="divider">
+
+        <div style="text-align: center; margin-bottom: 60px;">
+            <span class="section-title">The Foundation</span>
+            <p style="max-width: 600px; margin: 0 auto;">A high-fidelity environment designed for the professional media class and independent creators alike.</p>
+        </div>
+
+        <section class="tech-grid">
+            
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">Removing the Filter</h4>
+                <p><strong>No Throttling:</strong> There is no algorithm to "game." If a neighbor follows you, they see your content. No one needs to shout louder than the crowd to get noticed.</p>
+                <p><strong>Community without the Cesspool:</strong> We engineered out the shouting match by replacing traditional comment sections with a high-integrity "Letter" system for thoughtful, private responses.</p>
+            </div>
+
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">A Curated Neighborhood</h4>
+                <p><strong>Safety First:</strong> Zero tolerance for incitement to harm, doxxing, dehumanization, or sexualized content. All creators are fully vetted to protect neighborhood transparency.</p>
+                <p><strong>Political Neutrality:</strong> We accept absolutely no PAC or politician money for platform access or promotion.</p>
+            </div>
+
+            <div class="tech-item">
+                <h4 style="color: var(--accent-teal);">The Glass Box Policy</h4>
+                <p><strong>AI Pre-Checker:</strong> A private, zero-retention AI acts as an initial safety sieve where you can check your content for potential rule violations before publishing. No surprise takedowns.</p>
+                <p><strong>Human-Driven Review:</strong> All editorial decisions are made by a human team, never an automated script. Every moderation action is logged in a public Transparency Ledger.</p>
+            </div>
+
+        </section>
+
+        <div style="text-align: center; margin-top: 80px; margin-bottom: 60px;">
+            <span class="section-title">Sovereign-First Economics</span>
+            <p style="max-width: 600px; margin: 0 auto;">We provide the infrastructure. You manage the business.</p>
+        </div>
+
+        <section class="pricing-grid" style="justify-content: center;">
+            <div class="price-card featured" style="max-width: 400px; text-align: left;">
+                <span class="plan-name" style="font-size: 1.5rem; text-align: center;">The Creator Agreement</span>
+                <ul class="features-list" style="margin-top: 20px;">
+                    <li><strong>15/85 Subscription Split:</strong> Lofte retains a flat 15% platform fee to maintain security and infrastructure. You retain 85% of gross revenue from subscriptions and paywalled content.</li>
+                    <li><strong>0% Music Royalty Cut:</strong> Independent musicians keep 100% of streaming royalties in exchange for an agreed-upon exclusivity window.</li>
+                    <li><strong>Integrated Advertising:</strong> No mandatory "pre-roll" ads. You are free to integrate your own sponsors and keep 100% of that revenue.</li>
+                    <li><strong>Direct Audience Data:</strong> You own your subscriber list. If you choose to leave the platform, your audience moves with you.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <span class="section-title">Choose Your Path</span>
+            <p style="max-width: 600px; margin: 0 auto;">Select the category below that best describes your contribution to the Sanctuary when you apply.</p>
+        </div>
+
+        <div class="path-grid">
+            
+            <div class="path-column">
+                <h3>Lofte Music</h3>
+                <div class="path-item">
+                    <strong>Musician (Independent)</strong>
+                    <span>Own your work, keep 100% of royalties, and build a direct-to-neighbor legacy.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Musician (For Distribution)</strong>
+                    <span>Professional delivery to global DSPs via our 7digital pipeline.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Playlist Curator</strong>
+                    <span>Human-driven discovery across our 100M+ track catalog.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Radio Station DJ</strong>
+                    <span>Curated linear audio experiences and community broadcasts.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Podcaster</strong>
+                    <span>High-production series delivered via a robust global API.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Video Shorts Creator</strong>
+                    <span>High-impact, vertical storytelling under 60 seconds.</span>
+                </div>
+            </div>
+
+            <div class="path-column">
+                <h3>Lofte TV</h3>
+                <div class="path-item">
+                    <strong>Platform Partner (Anchor Tenant)</strong>
+                    <span>Large-scale organizations serving as the "front door" to the platform.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Lens Reporter</strong>
+                    <span>Niche experts focusing on specific investigative "Lens" channels.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Local Reporter</strong>
+                    <span>Independent voices focused on their specific geographic community.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Independent Creator</strong>
+                    <span>Narrative films, documentaries, and uncategorized high-fidelity video.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Municipal Creator</strong>
+                    <span>Official channels for cities, counties, and local school boards.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Weather Forecaster</strong>
+                    <span>High-accuracy, real-time meteorological data for the dashboard.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Local Newspaper</strong>
+                    <span>Print-legacy organizations transitioning to a sovereign video model.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Collective</strong>
+                    <span>Multi-contributor teams working under a single unified channel.</span>
+                </div>
+            </div>
+
+            <div class="path-column">
+                <h3>Lofte Letters</h3>
+                <div class="path-item">
+                    <strong>Independent Creator</strong>
+                    <span>Long-form, deep-dive journalism without the ad-clutter.</span>
+                </div>
+                <div class="path-item">
+                    <strong>Published Newsletter</strong>
+                    <span>Consistent, high-integrity digital print with direct subscriber ownership.</span>
+                </div>
+                <div class="path-item">
+                    <strong>News Organization</strong>
+                    <span>Professional newsrooms utilizing our industry-leading CMS.</span>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="reserve" class="waitlist-section" style="margin-top: 80px;">
+            <h2>Apply to the Sanctuary</h2>
+            
+            <div class="pledge-box">
+                <h4>The Sovereign Pledge</h4>
+                <p style="font-size: 0.95rem; color: #37474F; margin-bottom: 0;">
+                    "I understand that Lofte is a curated neighborhood. I pledge to produce high-integrity content and abide by the platform rules regarding safety and transparency. I acknowledge that while AI assists in safety, humans make the final decisions, and those decisions will be recorded in the public Transparency Ledger for the good of the Sanctuary."
+                </p>
+            </div>
+            
+            <div class="formaloo-container">
+                <div id="formz-wrapper" data-formz-slug="Wk8XuFCZ" data-formz-type="simple"></div>
+                <script src="https://formaloo.me/istatic/js/main.js"></script>
+            </div>
+            
+            <p class="small-print">Zero-party data. We do not track you.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Lofte LLC. All Rights Reserved.</p>
+            <p>Seattle, WA</p>
+            <p>
+                <a href="mailto:hello@lofte.online">hello@lofte.online</a> • 
+                <a href="canary.html">Warrant Canary</a> •
+                <a href="love.html">Lofte Love</a> •
+                <a href="invest.html">Invest</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script data-goatcounter="https://lofte.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
